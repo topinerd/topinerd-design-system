@@ -1,0 +1,47 @@
+{
+  "name": "@topinerd/react",
+  "version": "0.0.0",
+  "description": "A React implementation of the Topinerd design system",
+  "private": "false",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "node": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./index.css": "./dist/index.css"
+  },
+  "scripts": {
+    "build": "tsup --minify --clean",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings 0",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@topinerd/eslint-config": "*",
+    "@topinerd/typescript-config": "*",
+    "@types/eslint": "^8.56.5",
+    "@types/node": "^20.11.24",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19",
+    "@vanilla-extract/css": "^1.15.2",
+    "@vanilla-extract/esbuild-plugin": "2.3.0",
+    "eslint": "^8.57.0",
+    "tsup": "7.2.0",
+    "typescript": "^5.3.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
