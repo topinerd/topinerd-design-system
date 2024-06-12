@@ -2,7 +2,6 @@
   "name": "@topinerd/react",
   "version": "0.0.0",
   "description": "A React implementation of the Topinerd design system",
-  "private": "false",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",

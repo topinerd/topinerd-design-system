@@ -21,6 +21,12 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "build-storybook": {
+      "inputs": [".env"],
+      "outputs": [
+        "storybook-static/**"
+      ]
     }
   }
 }
