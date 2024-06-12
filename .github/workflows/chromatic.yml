@@ -32,18 +32,18 @@ jobs:
       #     projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
 
       - name: Change directory to Storybook
-        run: cd packages/apps/storybook
+        run: cd apps/storybook
 
       - name: Install dependencies
         run: yarn install
-        working-directory: packages/apps/storybook
+        working-directory: apps/storybook
 
       - name: Build Storybook
         run: yarn build-storybook
-        working-directory: packages/apps/storybook
+        working-directory: apps/storybook
 
       - name: Publish to Chromatic
         run: yarn chromatic
-        working-directory: packages/apps/storybook
+        working-directory: apps/storybook
         env:
           CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
