@@ -9,8 +9,7 @@
         "^build"
       ],
       "outputs": [
-        "dist/**",
-        "storybook-static/**"
+        "dist/**"
       ]
     },
     "lint": {
@@ -21,12 +20,6 @@
     "dev": {
       "cache": false,
       "persistent": true
-    },
-    "build-storybook": {
-      "inputs": [".env"],
-      "outputs": [
-        "storybook-static/**"
-      ]
     }
   }
 }
