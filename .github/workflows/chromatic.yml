@@ -1,13 +1,7 @@
 name: Publish Storybook to Chromatic
 
 on:
-  push:
-    branches:
-      - develop
-
-  pull_request:
-    branches:
-      - develop
+  push: {}
 
 jobs:
   chromatic:
