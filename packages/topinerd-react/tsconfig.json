@@ -4,6 +4,6 @@
     "outDir": "dist",
     "jsx": "react"
   },
-  "include": ["src/index.ts", "turbo", ],
+  "include": ["src/index.ts", "turbo"],
   "exclude": ["node_modules", "dist"]
 }
