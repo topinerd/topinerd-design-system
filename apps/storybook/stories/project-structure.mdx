@@ -1,0 +1,109 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Documentation/Project Structure" />
+
+## 구성
+
+**토피넛 디자인 시스템(Topinerd Design System) 프로젝트**는 터보레포(turborepo) 기반의 모노레포(monorepo) 프로젝트로 구성되었습니다. 초기 설정은 터보레포 공식 문서의 [스타터팩 예시](https://turbo.build/repo/docs/getting-started/installation)를 참고하여 이루어졌으며 아래의 명령어를 사용해 초기 설정을 진행하였습니다.
+
+```
+yarn dlx create-turbo@latest
+```
+
+전체 프로젝트 구성은 다음과 같습니다:
+
+```
+├── apps
+│   └── storybook
+├── configs
+│   ├── eslint-config
+│   └── typescript-config
+├── packages
+│    └── topinerd-react
+└── ...
+```
+
+- apps: 웹 프로젝트를 모아 둔 공간입니다.
+    - storybook: `topinerd-react` UI 패키지의 스토리북 웹 어플리케이션 구축을 위한 프로젝트입니다. 개별 컴포넌트의 스토리 파일을 작성합니다. (추후 스토리 파일 자체를 UI 패키지에 배치할 건지 논의해보면 좋을 듯 합니다.)
+- configs: 전체 프로젝트의 설정과 관련된 역할을 맡은 워크스페이스입니다.
+- packages: 공용 유틸 함수, 공용 디자인 토큰, 공용 컴포넌트 등 전체 프로젝트에서 재사용할 수 있는 코드들을 응집해 패키지화 시킨 공간입니다.
+    - topinerd-react: 토피케이션 등 토피넛 전체 프로젝트의 공용 리액트 컴포넌트를 관리하는 프로젝트입니다.
+
+## 터보레포 가이드
+
+### 워크스페이스(workspace)
+
+모노레포에서 워크스페이스는 개별 프로젝트를 의미하며, 모노레포 패키지의 루트 경로에 있는 `package.json` 파일에서 정의할 수 있습니다.
+
+```json
+{
+	"workspaces": [
+		"apps/*",
+		"configs/*",
+		"packages/*"
+	]
+}
+```
+
+`workspaces` 배열에서 정의한 하위 경로에 개별 프로젝트를 구축하여 모노레포의 워크스페이스를 구성할 수 있습니다. 예를 들어, 현재 프로젝트 워크스페이스는 `apps/storybook`, `configs/eslint-config`, `configs/typescript-config`, `packages/topinerd-react`로 구성되어 있습니다.
+
+### 패키지 내보내기(export)/가져오기(import)
+
+개별 워크스페이스는 단일 프로젝트이며 의존성을 추가 및 제거할 수 있습니다. 패키지를 빌드하면 `dist` 폴더에 빌드 파일이 배치됩니다. 개별 프로젝트의 `packages.json` 파일의 `exports` 속성을 통해 빌드 파일을 다른 모노레포 프로젝트에 노출시킬 수 있습니다. 
+
+```json
+// 공용 패키지 프로젝트의 'packages.json' 파일
+
+{
+  "name": "@topinerd/react",
+  ...
+  "exports": {
+    ".": {
+      "node": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./index.css": "./dist/index.css"
+  },
+  ...
+}
+```
+
+이후, 특정 워크스페이스에서 해당 패키지를 설치할 경우 다음과 같은 명령어를 사용합니다.
+
+```json
+yarn workspace web add @topinerd/react
+```
+
+그러면, 프로젝트의 `packages.json` 파일에서 의존성을 확인할 수 있습니다.
+
+```json
+{
+  "dependencies": {
+    "next": "latest", // External dependency
+    "@topinerd/react": "*" // Internal dependency
+  }
+}
+```
+
+### 프로젝트 빌드
+
+모노레포 루트 경로의 `package.json` 파일에서 script를 정의할 수 있습니다.
+
+```json
+...
+"scripts": {
+  "build": "turbo build",
+  "dev": "turbo dev",
+  "lint": "turbo lint",
+  "format": "prettier --write \"**/*.{ts,tsx,md}\""
+},
+...
+```
+
+각 명령어는 개별 프로젝트의 `package.json` 파일에 존재하는 명령어와 1:1로 대응되며 루트 경로에서 `yarn turbo [script]` 명령어를 실행하면 연결되어있는 모든 패키지의 명령어가 실행됩니다. 
+
+## Todo
+
+- Task
+- Cache
