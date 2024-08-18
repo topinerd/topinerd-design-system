@@ -1,0 +1,55 @@
+{
+  "Max-width": {
+    "$type": "FLOAT",
+    "$value": 1440
+  },
+  "Min-width": {
+    "$type": "FLOAT",
+    "$value": 1024
+  },
+  "Header.SiteNavigation": {},
+  "Body.MarginLeftRight": {
+    "$type": "FLOAT",
+    "$value": "{unit.24}"
+  },
+  "Body.MarginTop": {
+    "$type": "FLOAT",
+    "$value": "{unit.64}"
+  },
+  "Header.Button": {},
+  "Header.Avatar": {},
+  "Body.PaddingTopBottom": {
+    "$type": "FLOAT",
+    "$value": "{unit.20}"
+  },
+  "Body.PaddingLeftRight": {
+    "$type": "FLOAT",
+    "$value": "{unit.16}"
+  },
+  "Header.HamburgerMenu": {},
+  "Header.Watermark": {},
+  "Header.MarginLeftRight": {
+    "$type": "FLOAT",
+    "$value": "{unit.24}"
+  },
+  "Header.MarginTopBottom": {
+    "$type": "FLOAT",
+    "$value": "{unit.56}"
+  },
+  "Header.NavItem": {
+    "$type": "FLOAT",
+    "$value": "{unit.40}"
+  },
+  "Footer.FooterMenupadding": {
+    "$type": "FLOAT",
+    "$value": "{unit.32}"
+  },
+  "Footer.FooterInfo2Padding": {
+    "$type": "FLOAT",
+    "$value": "{unit.8}"
+  },
+  "Color.Color": {
+    "$type": "COLOR",
+    "$value": "#ffffff"
+  }
+}
