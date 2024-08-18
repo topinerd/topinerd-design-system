@@ -16,10 +16,11 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@4.2.2",
+  "packageManager": "yarn@4.4.0",
   "workspaces": [
     "apps/*",
     "configs/*",
-    "packages/*"
+    "packages/*",
+    "packages/figma-plugins/*"
   ]
 }
