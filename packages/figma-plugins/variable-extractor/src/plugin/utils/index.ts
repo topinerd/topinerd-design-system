@@ -1,14 +1,19 @@
-export function isRGBA(value: any): value is RGBA {
+export function isRGBA(value: unknown): value is RGBA {
   return (
     typeof value === "object" &&
+    value !== null &&
     "r" in value &&
     "g" in value &&
     "b" in value &&
-    "a" in value
+    "a" in value &&
+    typeof (value as RGBA).r === "number" &&
+    typeof (value as RGBA).g === "number" &&
+    typeof (value as RGBA).b === "number" &&
+    typeof (value as RGBA).a === "number"
   );
 }
 
-export function isVariableAlias(value: any): value is VariableAlias {
+export function isVariableAlias(value: unknown): value is VariableAlias {
   return (
     typeof value === "object" &&
     value !== null &&
