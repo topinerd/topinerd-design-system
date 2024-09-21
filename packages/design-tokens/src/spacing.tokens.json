@@ -1,0 +1,34 @@
+{
+  "spacing-none": {
+    "$type": "FLOAT",
+    "$value": 0
+  },
+  "spacing-xxs": {
+    "$type": "FLOAT",
+    "$value": 4
+  },
+  "spacing-ss": {
+    "$type": "FLOAT",
+    "$value": 8
+  },
+  "spacing-sm": {
+    "$type": "FLOAT",
+    "$value": 12
+  },
+  "spacing-md": {
+    "$type": "FLOAT",
+    "$value": 24
+  },
+  "spacing-lg": {
+    "$type": "FLOAT",
+    "$value": 32
+  },
+  "spacing-xl": {
+    "$type": "FLOAT",
+    "$value": 64
+  },
+  "spacing-xxl": {
+    "$type": "FLOAT",
+    "$value": 128
+  }
+}
