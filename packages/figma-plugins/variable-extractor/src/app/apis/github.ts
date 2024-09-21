@@ -7,7 +7,7 @@ export async function uploadTokens(
   accessToken: string,
   designTokenFiles: TokenFile[]
 ) {
-  const { owner, repo, dir, branch, CommitMsg } = config;
+  const { owner, repo, dir, branch, commitMsg, prTitle, prBody } = config;
   const newBranch = `design-token-${uuidv4()}`;
   const octokit = new Octokit({ auth: accessToken });
 
@@ -17,7 +17,6 @@ export async function uploadTokens(
       repo,
       ref: `heads/${branch}`,
     });
-
     const latestCommitSha = refData.object.sha;
 
     await octokit.git.createRef({
@@ -32,7 +31,6 @@ export async function uploadTokens(
       repo,
       commit_sha: latestCommitSha,
     });
-
     const baseTreeSha = baseTreeData.tree.sha;
 
     const tree = await Promise.all(
@@ -40,23 +38,17 @@ export async function uploadTokens(
         const filePath = `${dir}/${file.fileName}`;
         const jsonContent = JSON.stringify(file.body, null, 2);
 
-        const blob = new Blob([jsonContent], { type: "application/json" });
-        const arrayBuffer = await blob.arrayBuffer();
-        const base64Content = btoa(
-          String.fromCharCode(...new Uint8Array(arrayBuffer))
-        );
-
-        const blobData = await octokit.git.createBlob({
+        const { data: blobData } = await octokit.git.createBlob({
           owner,
           repo,
-          content: base64Content,
+          content: jsonContent,
           encoding: "utf-8",
         });
         return {
           path: filePath,
           mode: "100644" as const,
           type: "blob" as const,
-          sha: blobData.data.sha,
+          sha: blobData.sha,
         };
       })
     );
@@ -71,7 +63,7 @@ export async function uploadTokens(
     const { data: newCommit } = await octokit.git.createCommit({
       owner,
       repo,
-      message: CommitMsg,
+      message: commitMsg,
       tree: newTree.sha,
       parents: [latestCommitSha],
     });
@@ -82,7 +74,19 @@ export async function uploadTokens(
       ref: `heads/${newBranch}`,
       sha: newCommit.sha,
     });
+
+    const { data: pullRequest } = await octokit.pulls.create({
+      owner,
+      repo,
+      head: newBranch,
+      base: branch,
+      title: prTitle,
+      body: prBody,
+    });
+
+    console.log(`Pull request created: ${pullRequest.html_url}`);
   } catch (error) {
+    console.error("An error occurred during the upload process:", error);
     throw error;
   }
 }
