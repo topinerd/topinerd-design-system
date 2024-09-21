@@ -1,0 +1,220 @@
+{
+  "text": {
+    "01": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.100}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.100}"
+      }
+    },
+    "02": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.20}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.80}"
+      }
+    },
+    "03": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.30}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.70}"
+      }
+    },
+    "04": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.green.70}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.green.70}"
+      }
+    },
+    "primary": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.100}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.5}"
+      }
+    }
+  },
+  "surface": {
+    "01": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.5}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.10}"
+      }
+    },
+    "02": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.20}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.20}"
+      }
+    },
+    "03": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.40}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.40}"
+      }
+    }
+  },
+  "primary": {
+    "default": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.green.50}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.green.60}"
+      }
+    },
+    "hover": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.green.70}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.green.80}"
+      }
+    },
+    "pressed": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.green.90}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.green.100}"
+      }
+    },
+    "disabled": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.40}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.green.30}"
+      }
+    }
+  },
+  "secondary": {
+    "default": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.teal.50}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.teal.50}"
+      }
+    }
+  },
+  "action": {
+    "error": {
+      "default": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{color.light.red.60}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "{color.dark.red.50}"
+        }
+      },
+      "Hover": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{color.light.red.70}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "{color.dark.red.60}"
+        }
+      }
+    }
+  },
+  "icon": {
+    "01": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.40}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.40}"
+      }
+    }
+  },
+  "dimmed": {
+    "01": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.alpha.black.50}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.light.alpha.black.50}"
+      }
+    }
+  },
+  "border": {
+    "01": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.30}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.100}"
+      }
+    },
+    "02": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.20}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.20}"
+      }
+    },
+    "03": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.30}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.30}"
+      }
+    }
+  }
+}
