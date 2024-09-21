@@ -3150,6 +3150,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@topinerd/design-tokens@workspace:packages/design-tokens":
+  version: 0.0.0-use.local
+  resolution: "@topinerd/design-tokens@workspace:packages/design-tokens"
+  languageName: unknown
+  linkType: soft
+
 "@topinerd/eslint-config@npm:*, @topinerd/eslint-config@workspace:configs/eslint-config":
   version: 0.0.0-use.local
   resolution: "@topinerd/eslint-config@workspace:configs/eslint-config"
@@ -5749,12 +5755,6 @@ __metadata:
   checksum: 10c0/f98860cdf58b64991ae10205137c0e97d384c3a4edc7f807603887b7c4b850af1224a33d88012009f150861cbee4fa2d322c4cc04b9313bee312e47f6ecaa888
   languageName: node
   linkType: hard
-
-"design-tokens-6e0142@workspace:packages/design-tokens":
-  version: 0.0.0-use.local
-  resolution: "design-tokens-6e0142@workspace:packages/design-tokens"
-  languageName: unknown
-  linkType: soft
 
 "destroy@npm:1.2.0":
   version: 1.2.0
