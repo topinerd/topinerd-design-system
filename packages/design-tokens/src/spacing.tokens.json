@@ -3,6 +3,10 @@
     "$type": "FLOAT",
     "$value": 0
   },
+  "spacing-xxxs": {
+    "$type": "FLOAT",
+    "$value": 2
+  },
   "spacing-xxs": {
     "$type": "FLOAT",
     "$value": 4
@@ -14,6 +18,10 @@
   "spacing-sm": {
     "$type": "FLOAT",
     "$value": 12
+  },
+  "spacing-m": {
+    "$type": "FLOAT",
+    "$value": 16
   },
   "spacing-md": {
     "$type": "FLOAT",
