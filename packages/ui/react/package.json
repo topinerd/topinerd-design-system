@@ -20,6 +20,7 @@
     "build": "tsup --minify --clean",
     "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
+    "prepare": "panda codegen",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
@@ -28,6 +29,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.46.1",
     "@topinerd/eslint-config": "*",
     "@topinerd/typescript-config": "*",
     "@types/eslint": "^8.56.5",
@@ -37,6 +39,7 @@
     "@vanilla-extract/css": "^1.15.2",
     "@vanilla-extract/esbuild-plugin": "2.3.0",
     "eslint": "^8.57.0",
+    "postcss": "^8.4.47",
     "tsup": "7.2.0",
     "typescript": "^5.3.3"
   },
