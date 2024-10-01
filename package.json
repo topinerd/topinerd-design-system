@@ -21,6 +21,9 @@
     "apps/*",
     "configs/*",
     "packages/*",
-    "packages/figma-plugins/*"
+    "packages/ui/*",
+    "packages/utils/*",
+    "packages/plugins/*",
+    "packages/plugins/figma/*"
   ]
 }
