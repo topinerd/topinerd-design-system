@@ -1,5 +1,5 @@
 {
-  "name": "@topinerd/figma-variable-extractor",
+  "name": "@topinerd/token-extractor",
   "version": "0.0.0",
   "scripts": {
     "build": "webpack --mode=production --config webpack.config.ts",
