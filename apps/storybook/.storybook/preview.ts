@@ -1,5 +1,6 @@
+import "@topinerd/react/styles.css";
+
 import type { Preview } from "@storybook/react";
-import "@topinerd/react/index.css";
 
 const preview: Preview = {
   parameters: {

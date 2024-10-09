@@ -1,11 +1,11 @@
-import React from 'react';
-import { button } from './button.css';
-import { ButtonProps } from './button.types';
+import React from "react";
+import { ButtonProps } from "./button.types";
+import { buttonStyle } from "./button.css";
 
 const Button: React.FC<ButtonProps> = ({ children }) => {
-  return <button className={button}>{children}</button>
-}
+  return <button className={buttonStyle}>{children}</button>;
+};
 
-export { Button }
+export { Button };
 
-Button.displayName = 'Button';
+Button.displayName = "Button";
