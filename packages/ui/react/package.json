@@ -2,6 +2,7 @@
   "name": "@topinerd/react",
   "version": "0.0.0",
   "description": "A React implementation of the Topinerd design system",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -10,17 +11,17 @@
   ],
   "exports": {
     ".": {
-      "node": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
+      "node": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     },
-    "./index.css": "./dist/index.css"
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
-    "build": "tsup --minify --clean",
-    "dev": "tsup --watch",
+    "build": "yarn run prepare && tsup --minify --clean",
+    "dev": "yarn run prepare && tsup --watch",
     "lint": "eslint . --max-warnings 0",
-    "prepare": "panda codegen",
+    "prepare": "panda codegen && panda cssgen --outfile dist/styles.css",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@pandacss/dev": "^0.46.1",
     "@topinerd/eslint-config": "*",
+    "@topinerd/styled-system": "workspace:^",
     "@topinerd/typescript-config": "*",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",

@@ -1,15 +1,11 @@
 import { defineConfig } from "tsup";
-import { vanillaExtractPlugin } from "@vanilla-extract/esbuild-plugin";
 
 export default defineConfig({
-  entry: [
-    "src/index.ts",
-  ],
-  sourcemap: true,
+  entry: ["src/index.tsx"],
   outDir: "dist",
   format: ["esm", "cjs"],
-  //@ts-ignore
-  esbuildPlugins: [vanillaExtractPlugin()],
+  tsconfig: "tsconfig.json",
   dts: true,
+  sourcemap: true,
   noExternal: ["@fontsource"],
 });
