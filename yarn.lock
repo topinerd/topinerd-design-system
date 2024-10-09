@@ -3617,12 +3617,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@topinerd/design-tokens@workspace:packages/design-tokens":
-  version: 0.0.0-use.local
-  resolution: "@topinerd/design-tokens@workspace:packages/design-tokens"
-  languageName: unknown
-  linkType: soft
-
 "@topinerd/eslint-config@npm:*, @topinerd/eslint-config@workspace:configs/eslint-config":
   version: 0.0.0-use.local
   resolution: "@topinerd/eslint-config@workspace:configs/eslint-config"
@@ -3643,6 +3637,7 @@ __metadata:
   dependencies:
     "@pandacss/dev": "npm:^0.46.1"
     "@topinerd/eslint-config": "npm:*"
+    "@topinerd/styled-system": "workspace:^"
     "@topinerd/typescript-config": "npm:*"
     "@types/eslint": "npm:^8.56.5"
     "@types/node": "npm:^20.11.24"
@@ -3677,7 +3672,6 @@ __metadata:
     "@types/react-dom": "npm:^18.2.22"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
     "@typescript-eslint/parser": "npm:^7.2.0"
-    "@vanilla-extract/css": "npm:^1.15.2"
     "@vanilla-extract/vite-plugin": "npm:^4.0.10"
     "@vitejs/plugin-react": "npm:^4.2.1"
     chromatic: "npm:^11.5.3"
@@ -3693,9 +3687,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@topinerd/style-system@workspace:packages/utils/style-system":
+"@topinerd/styled-system@workspace:^, @topinerd/styled-system@workspace:packages/utils/styled-system":
   version: 0.0.0-use.local
-  resolution: "@topinerd/style-system@workspace:packages/utils/style-system"
+  resolution: "@topinerd/styled-system@workspace:packages/utils/styled-system"
+  dependencies:
+    "@pandacss/dev": "npm:^0.46.1"
   languageName: unknown
   linkType: soft
 

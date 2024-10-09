@@ -1,6 +1,6 @@
-import { style } from "@vanilla-extract/css";
+import { css } from "../../styled-system/css";
 
-export const button = style({
+export const buttonStyle = css({
   borderRadius: "0.375rem",
   backgroundColor: "green",
   paddingRight: "0.875rem",
@@ -10,7 +10,7 @@ export const button = style({
   lineHeight: "1.25rem",
   fontSize: "0.875rem",
   fontWeight: "700",
-  color: "#eee",
+  color: "#black",
   marginTop: "16px",
   marginBottom: "16px",
   textTransform: "uppercase",
