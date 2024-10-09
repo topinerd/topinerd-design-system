@@ -18,10 +18,9 @@
     "./styles.css": "./dist/styles.css"
   },
   "scripts": {
-    "build": "yarn run prepare && tsup --minify --clean",
-    "dev": "yarn run prepare && tsup --watch",
+    "build": "panda codegen && tsup --minify --clean && panda cssgen --outfile dist/styles.css",
+    "dev": "panda codegen && tsup --watch && panda cssgen --outfile dist/styles.css",
     "lint": "eslint . --max-warnings 0",
-    "prepare": "panda codegen && panda cssgen --outfile dist/styles.css",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
