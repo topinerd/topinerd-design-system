@@ -32,7 +32,6 @@
   "devDependencies": {
     "@pandacss/dev": "^0.46.1",
     "@topinerd/eslint-config": "*",
-    "@topinerd/styled-system": "workspace:^",
     "@topinerd/typescript-config": "*",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
