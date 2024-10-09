@@ -3637,7 +3637,6 @@ __metadata:
   dependencies:
     "@pandacss/dev": "npm:^0.46.1"
     "@topinerd/eslint-config": "npm:*"
-    "@topinerd/styled-system": "workspace:^"
     "@topinerd/typescript-config": "npm:*"
     "@types/eslint": "npm:^8.56.5"
     "@types/node": "npm:^20.11.24"
@@ -3684,14 +3683,6 @@ __metadata:
     storybook: "npm:^8.1.6"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.2.0"
-  languageName: unknown
-  linkType: soft
-
-"@topinerd/styled-system@workspace:^, @topinerd/styled-system@workspace:packages/utils/styled-system":
-  version: 0.0.0-use.local
-  resolution: "@topinerd/styled-system@workspace:packages/utils/styled-system"
-  dependencies:
-    "@pandacss/dev": "npm:^0.46.1"
   languageName: unknown
   linkType: soft
 
