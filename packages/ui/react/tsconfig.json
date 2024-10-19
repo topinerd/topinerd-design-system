@@ -1,26 +1,21 @@
 {
-  // "extends": "@topinerd/typescript-config/react-library.json",
-  // "compilerOptions": {
-  //   "outDir": "dist",
-  //   "jsx": "react"
-  // },
   "compilerOptions": {
-    "target": "ES2020", // JavaScript의 ES2020 문법으로 컴파일
-    "module": "ESNext", // ESNext 모듈 시스템 사용
-    "moduleResolution": "Node", // 모듈 해석 방법을 Node 방식으로 설정
-    "esModuleInterop": true, // CommonJS 모듈을 ES 모듈처럼 사용할 수 있도록 설정
-    "forceConsistentCasingInFileNames": true, // 파일명 대소문자 일관성 체크
-    "strict": true, // 모든 타입 검사 옵션을 엄격하게 설정
-    "skipLibCheck": true, // 라이브러리의 타입 정의 검사 생략
-    "allowSyntheticDefaultImports": true, // default import 구문 허용
-    "resolveJsonModule": true, // .json 파일을 import할 수 있도록 설정
-    "outDir": "./dist", // 컴파일 결과물을 저장할 디렉터리
-    "declaration": true, // 타입 정의 파일(.d.ts) 생성
-    "sourceMap": true, // 디버깅을 위한 소스맵 생성
-    "jsx": "react-jsx", // JSX 지원을 위해 react-jsx 설정
-    "lib": ["ESNext", "DOM"], // 사용할 라이브러리 설정
-    "types": ["node"] // node 환경의 타입 정의 사용
+    "target": "ES6",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "declaration": true,
+    "sourceMap": true,
+    "jsx": "react-jsx",
+    "lib": ["ESNext", "DOM"],
+    "types": ["node"]
   },
-  "include": ["src/index.tsx", "turbo", "styled-system"],
+  "include": ["src/index.tsx", "turbo"],
   "exclude": ["node_modules", "dist"]
 }
