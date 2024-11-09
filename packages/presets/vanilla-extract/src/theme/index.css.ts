@@ -7,14 +7,14 @@ import {
   flattenTokens,
   transformModeToken,
   transformSemanticToken,
-} from "../../scripts/tokenTransformer";
+} from "../transformer";
 
 import darkToken from "../../../../design-tokens/src/color-dark.tokens.json";
 import lightToken from "../../../../design-tokens/src/color-light.tokens.json";
 import alphaToken from "../../../../design-tokens/src/color-alpha.tokens.json";
 import semanticColorToken from "../../../../design-tokens/src/color-semantic.tokens.json";
 
-export const global = createGlobalTheme(":root", {});
+const global = createGlobalTheme(":root", {});
 
 const themeColor = createThemeContract({
   color: transformSemanticToken(semanticColorToken),

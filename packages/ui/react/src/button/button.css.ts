@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { vars } from "../theme/index.css";
+import { theme } from "@topinerd/preset";
 
 export const buttonStyle = style({
   borderRadius: "0.375rem",
@@ -11,7 +11,7 @@ export const buttonStyle = style({
   lineHeight: "1.25rem",
   fontSize: "0.875rem",
   fontWeight: "700",
-  color: vars.color["button-primary"].default,
+  color: theme.color["button-primary"].default,
   marginTop: "16px",
   marginBottom: "16px",
   textTransform: "uppercase",
