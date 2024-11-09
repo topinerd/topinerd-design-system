@@ -9,60 +9,6 @@
       "$value": "#000000"
     },
     "light": {
-      "alpha": {
-        "white": {
-          "5": {
-            "$type": "COLOR",
-            "$value": "#ffffff0d"
-          },
-          "10": {
-            "$type": "COLOR",
-            "$value": "#ffffff1a"
-          },
-          "30": {
-            "$type": "COLOR",
-            "$value": "#ffffff4d"
-          },
-          "50": {
-            "$type": "COLOR",
-            "$value": "#ffffff80"
-          },
-          "80": {
-            "$type": "COLOR",
-            "$value": "#ffffffcc"
-          },
-          "100": {
-            "$type": "COLOR",
-            "$value": "#ffffff"
-          }
-        },
-        "black": {
-          "5": {
-            "$type": "COLOR",
-            "$value": "#0000000d"
-          },
-          "10": {
-            "$type": "COLOR",
-            "$value": "#0000001a"
-          },
-          "30": {
-            "$type": "COLOR",
-            "$value": "#0000004d"
-          },
-          "50": {
-            "$type": "COLOR",
-            "$value": "#00000080"
-          },
-          "80": {
-            "$type": "COLOR",
-            "$value": "#000000cc"
-          },
-          "100": {
-            "$type": "COLOR",
-            "$value": "#000000"
-          }
-        }
-      },
       "gray": {
         "10": {
           "$type": "COLOR",
@@ -109,7 +55,7 @@
           "$value": "#1e2027"
         }
       },
-      "primary": {
+      "green": {
         "50": {
           "$type": "COLOR",
           "$value": "#e9f8f3"
@@ -151,7 +97,7 @@
           "$value": "#1a3330"
         }
       },
-      "secondary": {
+      "cyan": {
         "50": {
           "$type": "COLOR",
           "$value": "#e9f6f8"

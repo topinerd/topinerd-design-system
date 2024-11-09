@@ -46,7 +46,13 @@ async function processCollection(
         const token = await createToken(resolvedType, value);
 
         if (token) {
-          if (token.$type === "COLOR") {
+          /**
+           * The method of storing tokens varies depending on the number of modes in Figma’s local variables.
+           *
+           * - If there is only one mode, the mode key is not used and only the value is used.
+           * - If there are two or more modes, use both key and value in the form below.
+           */
+          if (token.$type === "COLOR" && collection.modes.length > 1) {
             file.body[name.replace(/\//g, ".")] = {
               ...file.body[name.replace(/\//g, ".")],
               [mode.name]: token,

@@ -1,8 +1,4 @@
 {
-  "white": {
-    "$type": "COLOR",
-    "$value": "#ffffff"
-  },
   "alpha": {
     "white": {
       "5": {
@@ -56,9 +52,5 @@
         "$value": "#000000cc"
       }
     }
-  },
-  "black": {
-    "$type": "COLOR",
-    "$value": "#000000"
   }
 }
