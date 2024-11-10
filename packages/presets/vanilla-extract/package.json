@@ -25,8 +25,8 @@
     "publish-packages": "turbo run build lint test && changeset version && changeset publish"
   },
   "devDependencies": {
-    "@topinerd/eslint-config": "*",
-    "@topinerd/typescript-config": "*",
+    "@topinerd/eslint-config": "workspace:*",
+    "@topinerd/typescript-config": "workspace:*",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
     "@vanilla-extract/css": "^1.15.2",
