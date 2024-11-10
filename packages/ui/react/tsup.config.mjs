@@ -20,7 +20,6 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   minify: true,
-  external: ["@topinerd/preset"],
 
   /**
    * plugins
