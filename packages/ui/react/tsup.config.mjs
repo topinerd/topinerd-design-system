@@ -20,7 +20,6 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   minify: true,
-  noExternal: ["@fontsource"],
 
   /**
    * plugins
