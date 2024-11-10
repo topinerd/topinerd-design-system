@@ -75,7 +75,7 @@
     "default": {
       "light": {
         "$type": "COLOR",
-        "$value": "{color.light.green.500}"
+        "$value": "{color.light.green.400}"
       },
       "dark": {
         "$type": "COLOR",
@@ -85,7 +85,7 @@
     "hover": {
       "light": {
         "$type": "COLOR",
-        "$value": "{color.light.green.600}"
+        "$value": "{color.light.green.500}"
       },
       "dark": {
         "$type": "COLOR",
@@ -95,7 +95,7 @@
     "pressed": {
       "light": {
         "$type": "COLOR",
-        "$value": "{color.light.green.700}"
+        "$value": "{color.light.green.600}"
       },
       "dark": {
         "$type": "COLOR",
@@ -217,7 +217,7 @@
     "primary": {
       "light": {
         "$type": "COLOR",
-        "$value": "{color.light.gray.200}"
+        "$value": "{color.light.gray.100}"
       },
       "dark": {
         "$type": "COLOR",
@@ -249,10 +249,20 @@
       }
     },
     "fill": {
+      "default": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{alpha.white.white}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "#ffffff"
+        }
+      },
       "accent": {
         "light": {
           "$type": "COLOR",
-          "$value": "{color.light.green.10}"
+          "$value": "{color.light.green.50}"
         },
         "dark": {
           "$type": "COLOR",
