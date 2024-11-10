@@ -8,9 +8,10 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@changesets/cli": "latest",
     "@topinerd/eslint-config": "*",
     "@topinerd/typescript-config": "*",
-    "prettier": "^3.2.5",
+    "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
