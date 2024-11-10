@@ -1,13 +1,5 @@
 {
   "color": {
-    "white": {
-      "$type": "COLOR",
-      "$value": "#ffffff"
-    },
-    "black": {
-      "$type": "COLOR",
-      "$value": "#000000"
-    },
     "light": {
       "gray": {
         "10": {
