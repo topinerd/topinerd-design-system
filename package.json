@@ -9,22 +9,13 @@
   },
   "devDependencies": {
     "@changesets/cli": "latest",
-    "@topinerd/eslint-config": "*",
-    "@topinerd/typescript-config": "*",
+    "@topinerd/eslint-config": "workspace:*",
+    "@topinerd/typescript-config": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "yarn@4.4.0",
-  "workspaces": [
-    "apps/*",
-    "configs/*",
-    "packages/*",
-    "packages/ui/*",
-    "packages/presets/*",
-    "packages/plugins/*",
-    "packages/plugins/figma/*"
-  ]
+  "packageManager": "pnpm@9.6.0"
 }

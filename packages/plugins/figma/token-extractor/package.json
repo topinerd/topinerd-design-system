@@ -6,7 +6,7 @@
     "build:watch": "webpack --mode=development --watch",
     "lint": "eslint --ext .ts,.tsx --ignore-pattern node_modules .",
     "lint:fix": "eslint --ext .ts,.tsx --ignore-pattern node_modules --fix .",
-    "dev": "yarn build --watch"
+    "dev": "webpack --mode=production --config webpack.config.ts --watch"
   },
   "devDependencies": {
     "@figma/eslint-plugin-figma-plugins": "*",
