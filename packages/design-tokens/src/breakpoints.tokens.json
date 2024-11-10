@@ -1,0 +1,52 @@
+{
+  "layout": {
+    "desktop": {
+      "$type": "FLOAT",
+      "$value": 1920
+    },
+    "mobile": {
+      "$type": "FLOAT",
+      "$value": 375
+    }
+  },
+  "container-size": {
+    "desktop": {
+      "$type": "FLOAT",
+      "$value": 1200
+    },
+    "mobile": {
+      "$type": "FLOAT",
+      "$value": 327
+    }
+  },
+  "columns": {
+    "desktop": {
+      "$type": "FLOAT",
+      "$value": 12
+    },
+    "mobile": {
+      "$type": "FLOAT",
+      "$value": 6
+    }
+  },
+  "margin": {
+    "desktop": {
+      "$type": "FLOAT",
+      "$value": 360
+    },
+    "mobile": {
+      "$type": "FLOAT",
+      "$value": 16
+    }
+  },
+  "gutter": {
+    "desktop": {
+      "$type": "FLOAT",
+      "$value": 20
+    },
+    "mobile": {
+      "$type": "FLOAT",
+      "$value": 16
+    }
+  }
+}
