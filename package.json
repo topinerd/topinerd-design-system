@@ -1,6 +1,6 @@
 {
-  "name": "topinerd-design-system",
   "private": true,
+  "name": "topinerd-design-system",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
