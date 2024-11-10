@@ -16,8 +16,10 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Enable Corepack
-        run: corepack enable
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
 
       - name: Checkout code
         uses: actions/checkout@v4
