@@ -2,7 +2,7 @@ type TokenNode<TNode, TLeaf> =
   | TLeaf
   | { [Key in keyof TNode]: TokenNode<TNode[Key], TLeaf> };
 
-type TokenLeafNode = { $type: string; $value: string };
+type TokenLeafNode = { $type: string; $value: string | number };
 type ThemeTokenNode = { light: TokenLeafNode; dark: TokenLeafNode };
 
 type TransformToken<TNode, TLeaf, TResult> = TNode extends TLeaf
@@ -13,7 +13,11 @@ export function transformBasicToken<T extends TokenNode<T, TokenLeafNode>>(
   node: T
 ): TransformToken<T, TokenLeafNode, string> {
   if ("$type" in node && "$value" in node) {
-    return node["$value"] as TransformToken<T, TokenLeafNode, string>;
+    if (node.$type === "COLOR") {
+      return node["$value"] as TransformToken<T, TokenLeafNode, string>;
+    }
+
+    return `${node["$value"]}px` as TransformToken<T, TokenLeafNode, string>;
   }
 
   //@todo [fix any type of 'transformed' object]
@@ -50,6 +54,10 @@ export function transformModeToken<T extends TokenNode<T, ThemeTokenNode>>(
 ): TransformToken<T, ThemeTokenNode, string> {
   if ("light" in node && "dark" in node) {
     const value = node[mode].$value;
+
+    //@todo [re construct type]
+    if (typeof value !== "string") throw Error("not implemented");
+
     const resolvedValue = resolvePlaceholder(value, primitiveTokens);
     return resolvedValue as TransformToken<T, ThemeTokenNode, string>;
   }

@@ -52,7 +52,7 @@ async function processCollection(
            * - If there is only one mode, the mode key is not used and only the value is used.
            * - If there are two or more modes, use both key and value in the form below.
            */
-          if (token.$type === "COLOR" && collection.modes.length > 1) {
+          if (collection.modes.length > 1) {
             file.body[name.replace(/\//g, ".")] = {
               ...file.body[name.replace(/\//g, ".")],
               [mode.name]: token,
