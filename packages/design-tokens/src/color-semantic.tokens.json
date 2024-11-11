@@ -53,11 +53,11 @@
     "on-primary": {
       "light": {
         "$type": "COLOR",
-        "$value": "{color.white}"
+        "$value": "{alpha.white.white}"
       },
       "dark": {
         "$type": "COLOR",
-        "$value": "{color.dark.gray.10}"
+        "$value": "{alpha.white.white}"
       }
     },
     "accent": {
@@ -205,11 +205,11 @@
     "01": {
       "light": {
         "$type": "COLOR",
-        "$value": "{color.light.alpha.black.50}"
+        "$value": "{alpha.black.40}"
       },
       "dark": {
         "$type": "COLOR",
-        "$value": "{color.light.alpha.black.50}"
+        "$value": "{alpha.black.40}"
       }
     }
   },
@@ -230,7 +230,7 @@
       "primary": {
         "light": {
           "$type": "COLOR",
-          "$value": "{color.white}"
+          "$value": "{alpha.white.white}"
         },
         "dark": {
           "$type": "COLOR",
@@ -256,7 +256,7 @@
         },
         "dark": {
           "$type": "COLOR",
-          "$value": "#ffffff"
+          "$value": "{color.dark.gray.10}"
         }
       },
       "accent": {
@@ -266,7 +266,7 @@
         },
         "dark": {
           "$type": "COLOR",
-          "$value": "{color.light.green.800}"
+          "$value": "{color.dark.gray.50}"
         }
       }
     },
