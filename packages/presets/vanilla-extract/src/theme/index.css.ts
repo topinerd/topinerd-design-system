@@ -5,6 +5,7 @@ import {
 } from "@vanilla-extract/css";
 import {
   flattenTokens,
+  transformBasicToken,
   transformModeToken,
   transformSemanticToken,
 } from "../transformer";
@@ -14,24 +15,32 @@ import lightToken from "../../../../design-tokens/src/color-light.tokens.json";
 import alphaToken from "../../../../design-tokens/src/color-alpha.tokens.json";
 import semanticColorToken from "../../../../design-tokens/src/color-semantic.tokens.json";
 
-const global = createGlobalTheme(":root", {});
+import breakpointToken from "../../../../design-tokens/src/breakpoints.tokens.json";
+import radiusToken from "../../../../design-tokens/src/radius.tokens.json";
+import spacingToken from "../../../../design-tokens/src/spacing.tokens.json";
 
-const themeColor = createThemeContract({
+const global = createGlobalTheme(":root", {
+  breakpoint: transformBasicToken(breakpointToken),
+  radius: transformBasicToken(radiusToken).radius,
+  spacing: transformBasicToken(spacingToken),
+});
+
+const color = createThemeContract({
   color: transformSemanticToken(semanticColorToken),
 });
 
-createTheme(themeColor, {
+createTheme(color, {
   color: transformModeToken(semanticColorToken, "light", [
     flattenTokens(lightToken),
     flattenTokens(alphaToken),
   ]),
 });
 
-createTheme(themeColor, {
+createTheme(color, {
   color: transformModeToken(semanticColorToken, "dark", [
     flattenTokens(darkToken),
     flattenTokens(alphaToken),
   ]),
 });
 
-export const vars = { ...global, ...themeColor };
+export const theme = { ...global, ...color };
