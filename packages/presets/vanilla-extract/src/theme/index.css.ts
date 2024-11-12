@@ -21,7 +21,7 @@ import spacingToken from "../../../../design-tokens/src/spacing.tokens.json";
 
 const global = createGlobalTheme(":root", {
   breakpoint: transformBasicToken(breakpointToken),
-  radius: transformBasicToken(radiusToken).radius,
+  radius: transformBasicToken(radiusToken),
   spacing: transformBasicToken(spacingToken),
 });
 
@@ -29,18 +29,18 @@ const color = createThemeContract({
   color: transformSemanticToken(semanticColorToken),
 });
 
-createTheme(color, {
+const lightTheme = createTheme(color, {
   color: transformModeToken(semanticColorToken, "light", [
     flattenTokens(lightToken),
     flattenTokens(alphaToken),
   ]),
 });
 
-createTheme(color, {
+const darkTheme = createTheme(color, {
   color: transformModeToken(semanticColorToken, "dark", [
     flattenTokens(darkToken),
     flattenTokens(alphaToken),
   ]),
 });
 
-export const theme = { ...global, ...color };
+export const theme = { ...global, ...color, lightTheme, darkTheme };
