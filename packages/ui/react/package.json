@@ -27,6 +27,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@storybook/react": "^8.1.6",
     "@topinerd/eslint-config": "workspace:*",
     "@topinerd/typescript-config": "workspace:*",
     "@types/eslint": "^8.56.5",
