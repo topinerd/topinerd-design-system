@@ -26,6 +26,9 @@ importers:
 
   apps/storybook:
     dependencies:
+      '@topinerd/preset':
+        specifier: workspace:*
+        version: link:../../packages/presets/vanilla-extract
       '@topinerd/react':
         specifier: workspace:*
         version: link:../../packages/ui/react
@@ -73,7 +76,7 @@ importers:
         specifier: ^7.2.0
         version: 7.18.0(eslint@8.57.1)(typescript@5.6.3)
       '@vanilla-extract/vite-plugin':
-        specifier: ^4.0.10
+        specifier: ^4.0.17
         version: 4.0.17(@types/node@22.9.0)(terser@5.36.0)(vite@5.4.10(@types/node@22.9.0)(terser@5.36.0))
       '@vitejs/plugin-react':
         specifier: ^4.2.1
@@ -292,6 +295,9 @@ importers:
         specifier: ^18.2.0
         version: 18.3.1(react@18.3.1)
     devDependencies:
+      '@storybook/react':
+        specifier: ^8.1.6
+        version: 8.4.2(@storybook/test@8.4.2(storybook@8.4.2(prettier@3.3.3)))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.2(prettier@3.3.3))(typescript@5.6.3)
       '@topinerd/eslint-config':
         specifier: workspace:*
         version: link:../../../configs/eslint-config

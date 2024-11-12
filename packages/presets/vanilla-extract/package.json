@@ -15,7 +15,7 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./index.css": "./dist/index.css"
+    "./theme.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",

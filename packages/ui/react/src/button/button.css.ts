@@ -3,7 +3,6 @@ import { theme } from "@topinerd/preset";
 
 export const buttonStyle = style({
   borderRadius: "0.375rem",
-  backgroundColor: "black",
   paddingRight: "0.875rem",
   paddingLeft: "0.875rem",
   paddingTop: "0.625rem",

@@ -2,6 +2,9 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "tasks": {
+    "@topinerd/react#build": {
+      "dependsOn": ["@topinerd/preset#build"]
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
