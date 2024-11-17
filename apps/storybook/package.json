@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@topinerd/storybook",
+  "name": "@topinerd-design-system/storybook",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -8,11 +8,12 @@
     "build-storybook": "storybook build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "check-types": "tsc --noEmit"
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "dependencies": {
-    "@topinerd/preset": "workspace:*",
-    "@topinerd/react": "workspace:*",
+    "@topinerd-design-system/preset": "workspace:*",
+    "@topinerd-design-system/react": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

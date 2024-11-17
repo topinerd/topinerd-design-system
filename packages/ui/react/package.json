@@ -1,5 +1,5 @@
 {
-  "name": "@topinerd/react",
+  "name": "@topinerd-design-system/react",
   "version": "0.0.0",
   "description": "A React implementation of the Topinerd design system",
   "type": "module",
@@ -18,18 +18,17 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "peerDependencies": {
-    "@topinerd/preset": "workspace:*",
+    "@topinerd-design-system/preset": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@storybook/react": "^8.1.6",
-    "@topinerd/eslint-config": "workspace:*",
-    "@topinerd/typescript-config": "workspace:*",
+    "@topinerd-design-system/eslint-config": "workspace:*",
+    "@topinerd-design-system/typescript-config": "workspace:*",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
     "@types/react": "^18.2.61",

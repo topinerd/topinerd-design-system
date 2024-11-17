@@ -1,5 +1,5 @@
 {
-  "extends": "@topinerd/typescript-config/react-library.json",
+  "extends": "@topinerd-design-system/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
     "jsx": "react"

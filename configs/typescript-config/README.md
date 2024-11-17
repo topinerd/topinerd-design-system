@@ -1,3 +1,3 @@
-# `@topinerd/typescript-config`
+# `@topinerd-design-system/typescript-config`
 
 Collection of internal typescript configurations.
