@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@topinerd-design-system/storybook",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
