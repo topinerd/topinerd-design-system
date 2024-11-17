@@ -17,8 +17,8 @@ export const config = {
   owner: "topinerd",
   repo: "topinerd-design-system",
   dir: "packages/design-tokens/src",
-  branch: "develop",
-  commitMsg: "feat: sync design tokens with latest figma updates",
-  prTitle: "feat: sync design tokens with latest figma updates",
+  branch: "main",
+  commitMsg: "sync design tokens with latest figma updates",
+  prTitle: "sync design tokens with latest figma updates",
   prBody,
 };
