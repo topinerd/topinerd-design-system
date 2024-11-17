@@ -3,7 +3,7 @@ name: Publish Storybook to Chromatic
 on:
   pull_request:
     branches:
-      - develop
+      - main
 
 jobs:
   chromatic:
