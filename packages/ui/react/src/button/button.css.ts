@@ -1,5 +1,5 @@
 import { style } from "@vanilla-extract/css";
-import { theme } from "@topinerd/preset";
+import { theme } from "@topinerd-design-system/preset";
 
 export const buttonStyle = style({
   borderRadius: "0.375rem",

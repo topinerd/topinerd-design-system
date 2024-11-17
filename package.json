@@ -1,21 +1,25 @@
 {
-  "private": true,
   "name": "topinerd-design-system",
+  "version": "0.0.1",
+  "private": true,
+  "packageManager": "pnpm@9.6.0",
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=9"
+  },
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "changeset:version": "changeset version",
+    "changeset:publish": "turbo build && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "latest",
-    "@topinerd/eslint-config": "workspace:*",
-    "@topinerd/typescript-config": "workspace:*",
+    "@topinerd-design-system/eslint-config": "workspace:*",
+    "@topinerd-design-system/typescript-config": "workspace:*",
     "prettier": "latest",
     "turbo": "latest"
-  },
-  "engines": {
-    "node": ">=18"
-  },
-  "packageManager": "pnpm@9.6.0"
+  }
 }
