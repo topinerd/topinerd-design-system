@@ -1,18 +1,21 @@
 {
   "name": "@topinerd-design-system/react",
-  "version": "0.0.1",
   "description": "A React implementation of the Topinerd design system",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "exports": {
     ".": {
       "node": "./dist/index.cjs",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./index.css": "./dist/index.css"
+    "./style.css": "./dist/index.css"
   },
   "scripts": {
     "build": "tsup",

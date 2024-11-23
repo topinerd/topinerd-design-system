@@ -1,7 +1,8 @@
 {
-  "name": "topinerd-design-system",
-  "version": "0.0.1",
   "private": true,
+  "name": "topinerd-design-system",
+  "description": "A monorepo for the @topinerd-design-system.",
+  "version": "0.0.1",
   "packageManager": "pnpm@9.6.0",
   "engines": {
     "node": ">=18",
