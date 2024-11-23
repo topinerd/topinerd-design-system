@@ -132,6 +132,8 @@ importers:
 
   configs/typescript-config: {}
 
+  packages/design-tokens: {}
+
   packages/plugins/figma/token-extractor:
     dependencies:
       '@octokit/rest':
@@ -249,6 +251,9 @@ importers:
 
   packages/presets/vanilla-extract:
     devDependencies:
+      '@topinerd-design-system/design-tokens':
+        specifier: workspace:*
+        version: link:../../design-tokens
       '@topinerd-design-system/eslint-config':
         specifier: workspace:*
         version: link:../../../configs/eslint-config
