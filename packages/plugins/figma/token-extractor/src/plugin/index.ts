@@ -32,7 +32,7 @@ async function processCollection(
   collection: VariableCollection
 ): Promise<TokenFile> {
   const file: TokenFile = {
-    fileName: `${collection.name}.tokens.json`,
+    fileName: `token.${collection.name}.json`,
     body: {},
   };
 

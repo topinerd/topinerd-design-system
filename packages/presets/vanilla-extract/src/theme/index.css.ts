@@ -1,8 +1,4 @@
-import {
-  createGlobalTheme,
-  createTheme,
-  createThemeContract,
-} from "@vanilla-extract/css";
+import { createGlobalTheme, createThemeContract } from "@vanilla-extract/css";
 import {
   flattenTokens,
   transformBasicToken,
@@ -10,37 +6,39 @@ import {
   transformSemanticToken,
 } from "../transformer";
 
-import darkToken from "../../../../design-tokens/src/color-dark.tokens.json";
-import lightToken from "../../../../design-tokens/src/color-light.tokens.json";
-import alphaToken from "../../../../design-tokens/src/color-alpha.tokens.json";
-import semanticColorToken from "../../../../design-tokens/src/color-semantic.tokens.json";
-
-import breakpointToken from "../../../../design-tokens/src/breakpoints.tokens.json";
-import radiusToken from "../../../../design-tokens/src/radius.tokens.json";
-import spacingToken from "../../../../design-tokens/src/spacing.tokens.json";
+import COLOR_DARK from "../../../../design-tokens/src/token.color-dark.json";
+import COLOR_LIGHT from "../../../../design-tokens/src/token.color-light.json";
+import COLOR_ALPHA from "../../../../design-tokens/src/token.color-alpha.json";
+import COLOR_SEMANTIC from "../../../../design-tokens/src/token.color-semantic.json";
+import BREAKPOINTS from "../../../../design-tokens/src/token.breakpoints.json";
+import RADIUS from "../../../../design-tokens/src/token.radius.json";
+import SPACING from "../../../../design-tokens/src/token.spacing.json";
 
 const global = createGlobalTheme(":root", {
-  breakpoint: transformBasicToken(breakpointToken),
-  radius: transformBasicToken(radiusToken),
-  spacing: transformBasicToken(spacingToken),
+  breakpoint: transformBasicToken(BREAKPOINTS),
+  radius: transformBasicToken(RADIUS),
+  spacing: transformBasicToken(SPACING),
 });
 
 const color = createThemeContract({
-  color: transformSemanticToken(semanticColorToken),
+  color: transformSemanticToken(COLOR_SEMANTIC),
 });
 
-const lightTheme = createTheme(color, {
-  color: transformModeToken(semanticColorToken, "light", [
-    flattenTokens(lightToken),
-    flattenTokens(alphaToken),
+createGlobalTheme(":root", color, {
+  color: transformModeToken(COLOR_SEMANTIC, "light", [
+    flattenTokens(COLOR_LIGHT),
+    flattenTokens(COLOR_ALPHA),
   ]),
 });
 
-const darkTheme = createTheme(color, {
-  color: transformModeToken(semanticColorToken, "dark", [
-    flattenTokens(darkToken),
-    flattenTokens(alphaToken),
+createGlobalTheme("[data-theme='dark']", color, {
+  color: transformModeToken(COLOR_SEMANTIC, "dark", [
+    flattenTokens(COLOR_DARK),
+    flattenTokens(COLOR_ALPHA),
   ]),
 });
 
-export const theme = { ...global, ...color, lightTheme, darkTheme };
+export const theme = {
+  ...global,
+  ...color,
+};
