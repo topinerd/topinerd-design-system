@@ -5,3 +5,9 @@
 ### Patch Changes
 
 - 263fcb9: init changeset
+
+## 0.0.2
+
+### Patch Changes
+
+- hotfix: change mismatched version
