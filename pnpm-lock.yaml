@@ -251,9 +251,6 @@ importers:
 
   packages/presets/vanilla-extract:
     devDependencies:
-      '@topinerd-design-system/design-tokens':
-        specifier: workspace:*
-        version: link:../../design-tokens
       '@topinerd-design-system/eslint-config':
         specifier: workspace:*
         version: link:../../../configs/eslint-config
