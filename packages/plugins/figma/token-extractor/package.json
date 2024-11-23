@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "@topinerd-design-system/token-extractor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "webpack --mode=production --config webpack.config.ts",
     "dev": "webpack --mode=production --config webpack.config.ts --watch",
