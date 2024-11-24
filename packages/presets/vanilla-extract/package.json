@@ -1,7 +1,7 @@
 {
   "name": "@topinerd-design-system/preset",
   "description": "A shared preset package for the @topinerd-design-system.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist"
