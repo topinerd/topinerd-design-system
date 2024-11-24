@@ -32,9 +32,9 @@ export function transformBasicToken<T extends TokenNode<T, TokenLeafNode>>(
 
 export function transformSemanticToken<T extends TokenNode<T, ThemeTokenNode>>(
   node: T
-): TransformToken<T, ThemeTokenNode, ""> {
+): TransformToken<T, ThemeTokenNode, string> {
   if ("light" in node && "dark" in node) {
-    return "" as TransformToken<T, ThemeTokenNode, "">;
+    return "" as TransformToken<T, ThemeTokenNode, string>;
   }
 
   //@todo [fix any type of 'transformed' object]
@@ -44,7 +44,7 @@ export function transformSemanticToken<T extends TokenNode<T, ThemeTokenNode>>(
     transformed[key] = transformSemanticToken(node[key]);
   }
 
-  return transformed as TransformToken<T, ThemeTokenNode, "">;
+  return transformed as TransformToken<T, ThemeTokenNode, string>;
 }
 
 export function transformModeToken<T extends TokenNode<T, ThemeTokenNode>>(

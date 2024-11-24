@@ -1,1 +1,2 @@
-export { theme } from "./theme/index.css";
+export { theme } from "./theme.css";
+export type { Theme } from "./theme.css";
