@@ -2,5 +2,5 @@
   "private": true,
   "name": "@topinerd-design-system/design-tokens",
   "description": "Centralized token definitions for @topinerd-design-system.",
-  "version": "0.0.0"
+  "version": "0.0.1"
 }
