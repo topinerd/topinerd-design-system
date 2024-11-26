@@ -246,13 +246,23 @@
           "$type": "COLOR",
           "$value": "{color.dark.gray.100}"
         }
+      },
+      "pressed": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{color.light.gray.10}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "{color.dark.gray.100}"
+        }
       }
     },
     "fill": {
       "default": {
         "light": {
           "$type": "COLOR",
-          "$value": "{alpha.white.white}"
+          "$value": "{color.light.gray.10}"
         },
         "dark": {
           "$type": "COLOR",
@@ -263,6 +273,16 @@
         "light": {
           "$type": "COLOR",
           "$value": "{color.light.green.50}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "{color.dark.gray.50}"
+        }
+      },
+      "label-defalut": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{color.light.gray.50}"
         },
         "dark": {
           "$type": "COLOR",
