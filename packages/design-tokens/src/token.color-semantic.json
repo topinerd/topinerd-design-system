@@ -85,7 +85,7 @@
     "hover": {
       "light": {
         "$type": "COLOR",
-        "$value": "#249a78"
+        "$value": "{color.light.green.500}"
       },
       "dark": {
         "$type": "COLOR",
