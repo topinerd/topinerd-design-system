@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { TokenFile } from "../../types";
 import { uploadTokens } from "../apis/github";
 import { useNavigate } from "react-router-dom";
+import type { TokenFile } from "../../types";
 
 export function UseUploadTokens() {
   const [isUplaoding, setIsUploading] = useState(false);
@@ -22,7 +22,7 @@ export function UseUploadTokens() {
         },
         pluginId: "*",
       },
-      "*"
+      "*",
     );
   };
 

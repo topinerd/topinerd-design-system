@@ -23,8 +23,6 @@ export default defineConfig({
 
   /**
    * plugins
-   * @todo - fix type error
    */
-  //@ts-ignore
   esbuildPlugins: [vanillaExtractPlugin()],
 });

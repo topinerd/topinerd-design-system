@@ -10,7 +10,7 @@ type TransformToken<TNode, TLeaf, TResult> = TNode extends TLeaf
   : { [K in keyof TNode]: TransformToken<TNode[K], TLeaf, TResult> };
 
 export function transformBasicToken<T extends TokenNode<T, TokenLeafNode>>(
-  node: T
+  node: T,
 ): TransformToken<T, TokenLeafNode, string> {
   if ("$type" in node && "$value" in node) {
     if (node.$type === "COLOR") {
@@ -21,7 +21,7 @@ export function transformBasicToken<T extends TokenNode<T, TokenLeafNode>>(
   }
 
   //@todo [fix any type of 'transformed' object]
-  let transformed = {} as any;
+  const transformed = {} as any;
 
   for (const key in node) {
     transformed[key] = transformBasicToken(node[key]);
@@ -31,14 +31,14 @@ export function transformBasicToken<T extends TokenNode<T, TokenLeafNode>>(
 }
 
 export function transformSemanticToken<T extends TokenNode<T, ThemeTokenNode>>(
-  node: T
+  node: T,
 ): TransformToken<T, ThemeTokenNode, string> {
   if ("light" in node && "dark" in node) {
     return "" as TransformToken<T, ThemeTokenNode, string>;
   }
 
   //@todo [fix any type of 'transformed' object]
-  let transformed = {} as any;
+  const transformed = {} as any;
 
   for (const key in node) {
     transformed[key] = transformSemanticToken(node[key]);
@@ -50,7 +50,7 @@ export function transformSemanticToken<T extends TokenNode<T, ThemeTokenNode>>(
 export function transformModeToken<T extends TokenNode<T, ThemeTokenNode>>(
   node: T,
   mode: "light" | "dark",
-  primitiveTokens: { [key: string]: string }[]
+  primitiveTokens: { [key: string]: string }[],
 ): TransformToken<T, ThemeTokenNode, string> {
   if ("light" in node && "dark" in node) {
     const value = node[mode].$value;
@@ -63,7 +63,7 @@ export function transformModeToken<T extends TokenNode<T, ThemeTokenNode>>(
   }
 
   //@todo [fix any type of 'transformed' object]
-  let transformed = {} as any;
+  const transformed = {} as any;
 
   for (const key in node) {
     transformed[key] = transformModeToken(node[key], mode, primitiveTokens);
@@ -75,7 +75,7 @@ export function transformModeToken<T extends TokenNode<T, ThemeTokenNode>>(
 export function flattenTokens(
   obj: any,
   prefix = "",
-  res: any = {}
+  res: any = {},
 ): { [key: string]: string } {
   for (const key in obj) {
     const value = obj[key];
@@ -99,7 +99,7 @@ export function flattenTokens(
 
 function resolvePlaceholder(
   value: string,
-  primitiveTokensArray: { [key: string]: string }[]
+  primitiveTokensArray: { [key: string]: string }[],
 ): string {
   //@ts-ignore
   return value.replace(/\{([^\}]+)\}/g, (_, tokenKey) => {

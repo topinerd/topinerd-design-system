@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import {
-  ExtractTokenAction,
-  ExtractTokenActionPayload,
-  PluginMessage,
-} from "../../types";
 import { Label } from "../components/label";
 import { Input } from "../components/input";
 import { Button } from "../components/button";
 import { UseUploadTokens } from "../hooks/use-upload-tokens";
 import { Loader2 } from "lucide-react";
+import type {
+  ExtractTokenAction,
+  ExtractTokenActionPayload,
+  PluginMessage,
+} from "../../types";
 
 const Extract: React.FC = () => {
   const { isUplaoding, requestDesignTokens, upload } = UseUploadTokens();
@@ -18,7 +18,7 @@ const Extract: React.FC = () => {
     window.onmessage = async (
       event: MessageEvent<
         PluginMessage<ExtractTokenAction, ExtractTokenActionPayload>
-      >
+      >,
     ) => {
       const { type, payload } = event.data.pluginMessage;
       if (type === "extractTokens" && payload) {
@@ -38,7 +38,7 @@ const Extract: React.FC = () => {
       <Input
         id="token"
         value={acessToken}
-        onChange={(e) => setAcessToken(e.target.value)}
+        onChange={e => setAcessToken(e.target.value)}
       />
       <Button
         disabled={isUplaoding || !acessToken}

@@ -51,8 +51,6 @@ export type Theme = {
   color: typeof semanticColor;
 };
 
-//@todo [fix type error]
-//@ts-ignore
 export const theme: Theme = {
   ...global,
   ...color,

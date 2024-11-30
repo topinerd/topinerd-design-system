@@ -1,8 +1,8 @@
-import { ExtractTokenAction } from "../types/action";
-import { AppMessage } from "../types/plugin";
-import { TokenBody, TokenFile, TokenValue } from "../types/token";
 import { responseExtractTokensToUI } from "./lib/messaging";
 import { isRGBA, isVariableAlias, rgbToHex } from "./utils";
+import type { ExtractTokenAction } from "../types/action";
+import type { TokenBody, TokenFile, TokenValue } from "../types/token";
+import type { AppMessage } from "../types/plugin";
 
 figma.showUI(__html__);
 
@@ -21,7 +21,7 @@ async function extractTokens(): Promise<TokenFile[]> {
     files.push(await processCollection(collection));
   }
 
-  files.forEach((file) => {
+  files.forEach(file => {
     file.body = convertToNested(file.body);
   });
 
@@ -29,7 +29,7 @@ async function extractTokens(): Promise<TokenFile[]> {
 }
 
 async function processCollection(
-  collection: VariableCollection
+  collection: VariableCollection,
 ): Promise<TokenFile> {
   const file: TokenFile = {
     fileName: `token.${collection.name}.json`,
@@ -43,22 +43,25 @@ async function processCollection(
       if (variable) {
         const { name, resolvedType, valuesByMode } = variable;
         const value = valuesByMode[mode.modeId];
-        const token = await createToken(resolvedType, value);
 
-        if (token) {
-          /**
-           * The method of storing tokens varies depending on the number of modes in Figma’s local variables.
-           *
-           * - If there is only one mode, the mode key is not used and only the value is used.
-           * - If there are two or more modes, use both key and value in the form below.
-           */
-          if (collection.modes.length > 1) {
-            file.body[name.replace(/\//g, ".")] = {
-              ...file.body[name.replace(/\//g, ".")],
-              [mode.name]: token,
-            };
-          } else {
-            file.body[name.replace(/\//g, ".")] = token;
+        if (value) {
+          const token = await createToken(resolvedType, value);
+
+          if (token) {
+            /**
+             * The method of storing tokens varies depending on the number of modes in Figma’s local variables.
+             *
+             * - If there is only one mode, the mode key is not used and only the value is used.
+             * - If there are two or more modes, use both key and value in the form below.
+             */
+            if (collection.modes.length > 1) {
+              file.body[name.replace(/\//g, ".")] = {
+                ...file.body[name.replace(/\//g, ".")],
+                [mode.name]: token,
+              };
+            } else {
+              file.body[name.replace(/\//g, ".")] = token;
+            }
           }
         }
       }
@@ -70,7 +73,7 @@ async function processCollection(
 
 async function createToken(
   resolvedType: VariableResolvedDataType,
-  value: VariableValue
+  value: VariableValue,
 ): Promise<TokenValue | null> {
   switch (resolvedType) {
     case "BOOLEAN":
@@ -111,7 +114,7 @@ function convertToNested(obj: TokenBody): TokenBody {
     const parts: string[] = key.split(".");
     let current: TokenBody = result;
     parts.forEach((part, index) => {
-      if (index === parts.length - 1) {
+      if (index === parts.length - 1 && obj[key] !== undefined) {
         current[part] = obj[key];
       } else {
         if (
