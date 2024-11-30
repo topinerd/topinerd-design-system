@@ -1,4 +1,4 @@
-import { TokenFile } from "./token";
+import type { TokenFile } from "./token";
 
 export type ExtractTokenAction = "extractTokens";
 export type ExtractTokenActionPayload = TokenFile[];

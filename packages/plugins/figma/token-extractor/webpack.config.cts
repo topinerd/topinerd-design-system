@@ -2,8 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const InlineChunkHtmlPlugin = require("react-dev-utils/InlineChunkHtmlPlugin");
 const path = require("path");
 
-//@ts-ignore
-module.exports = (_, argv: { mode: string }) => ({
+module.exports = (_: unknown, argv: { mode: string }) => ({
   mode: argv.mode === "production" ? "production" : "development",
   devtool: argv.mode === "production" ? false : "inline-source-map",
   entry: {

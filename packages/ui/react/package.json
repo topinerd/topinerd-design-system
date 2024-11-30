@@ -20,28 +20,31 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint . --fix",
+    "format": "prettier . --write",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "peerDependencies": {
     "@topinerd-design-system/preset": "workspace:*",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
     "@storybook/react": "^8.1.6",
-    "@topinerd-design-system/eslint-config": "workspace:*",
-    "@topinerd-design-system/typescript-config": "workspace:*",
-    "@types/eslint": "^8.56.5",
-    "@types/node": "^20.11.24",
-    "@types/react": "^18.2.61",
-    "@types/react-dom": "^18.2.19",
     "@vanilla-extract/css": "^1.15.2",
     "@vanilla-extract/esbuild-plugin": "^2.3.11",
-    "eslint": "^8.57.0",
-    "postcss": "^8.4.47",
-    "tsup": "7.2.0",
-    "typescript": "^5.3.3"
+    "@topinerd-design-system/eslint-config": "workspace:*",
+    "@topinerd-design-system/prettier-config": "workspace:*",
+    "@topinerd-design-system/typescript-config": "workspace:*",
+    "@types/eslint": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "postcss": "catalog:",
+    "prettier": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
   },
   "publishConfig": {
     "access": "public"

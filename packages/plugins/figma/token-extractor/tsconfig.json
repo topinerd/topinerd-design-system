@@ -1,14 +1,12 @@
 {
+  "extends": "@topinerd-design-system/typescript-config/tsconfig-base.json",
   "compilerOptions": {
-    "target": "es6",
     "outDir": "dist",
     "jsx": "react",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "allowSyntheticDefaultImports": true,
-    "removeComments": true,
-    "noImplicitAny": true,
-    "moduleResolution": "Node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "typeRoots": ["./node_modules/@types", "./node_modules/@figma"]
-  }
+  },
+  "include": ["src", "turbo"],
+  "exclude": ["node_modules", "dist"]
 }

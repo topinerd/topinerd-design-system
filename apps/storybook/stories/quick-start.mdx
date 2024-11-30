@@ -1,9 +1,9 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 
 <Meta title="Documentation/Quick Start" />
 
 ## 설치
- 
+
 패키지 매니저를 통해 `@topinerd/react` 패키지를 프로젝트에 추가하세요:
 
 ```
@@ -24,7 +24,11 @@ import "@topinerd/react/index.css";
 import App from "./app";
 
 function main() {
-  return <><App/></>
+  return (
+    <>
+      <App />
+    </>
+  );
 }
 ```
 
@@ -33,7 +37,5 @@ function main() {
 ```tsx
 import { Button } from "@topinred/react";
 
-const Hello = () => (
-  <Button>Hello World</Button>
-)
+const Hello = () => <Button>Hello World</Button>;
 ```

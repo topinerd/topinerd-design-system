@@ -1,9 +1,0 @@
-{
-  "extends": "@topinerd-design-system/typescript-config/react-library.json",
-  "compilerOptions": {
-    "outDir": "dist",
-    "jsx": "react"
-  },
-  "include": ["src", "turbo"],
-  "exclude": ["node_modules", "dist"]
-}

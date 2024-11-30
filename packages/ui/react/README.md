@@ -14,18 +14,14 @@ yarn add @topinerd/react
 
 Import the `@topinerd/react/index.css` file at the root of your application:
 
-
 ```ts
-import "@topinerd/react/index.css"
+import "@topinerd/react/index.css";
 ```
 
 Then, import UI components from the library:
 
-
 ```tsx
 import { Button } from "@topinred/react";
 
-const Hello = () => (
-  <Button>Hello World</Button>
-)
+const Hello = () => <Button>Hello World</Button>;
 ```

@@ -1,10 +1,9 @@
 {
-  "extends": "@topinerd-design-system/typescript-config/base",
+  "extends": "@topinerd-design-system/typescript-config/tsconfig-base.json",
   "compilerOptions": {
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "outDir": "dist"
+    "moduleResolution": "Bundler"
   },
-  "include": ["src"],
+  "include": ["src", "turbo"],
   "exclude": ["node_modules", "dist"]
 }

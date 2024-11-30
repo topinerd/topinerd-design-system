@@ -1,4 +1,4 @@
-import { AppMessage, ExtractTokenAction } from "../../types";
+import type { AppMessage, ExtractTokenAction } from "../../types";
 
 function requestToPlugin<T>(pluginMessage: T) {
   parent.postMessage({ pluginMessage }, "*");

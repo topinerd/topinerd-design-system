@@ -9,12 +9,13 @@
     "pnpm": ">=9"
   },
   "scripts": {
+    "prepare": "husky",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
+    "format": "turbo format",
     "clean": "pnpm clean:root && turbo clean",
     "clean:root": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "changeset:version": "changeset version",
     "changeset:publish": "turbo build && changeset publish"
   },
@@ -22,6 +23,8 @@
     "@changesets/cli": "latest",
     "@topinerd-design-system/eslint-config": "workspace:*",
     "@topinerd-design-system/typescript-config": "workspace:*",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
     "prettier": "latest",
     "turbo": "latest"
   }
