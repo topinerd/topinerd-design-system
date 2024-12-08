@@ -1,29 +1,31 @@
 import { useState } from "react";
-import { uploadTokens } from "../apis/github";
 import { useNavigate } from "react-router-dom";
-import type { TokenFile } from "../../types";
+import { uploadTokens } from "../apis/token";
+import { postMessageToPlugin } from "../lib/messaging";
+import { ACTION } from "../../shared/constants";
 
-export function UseUploadTokens() {
+import type { FileData } from "../../shared/types/data";
+import type { TokenBody } from "../../shared/types/token";
+import type { ActionTypeMap } from "../../shared/types/action";
+
+export function useUploadTokens() {
   const [isUplaoding, setIsUploading] = useState(false);
   const navigate = useNavigate();
 
-  const upload = async (accessToken: string, designTokens: TokenFile[]) => {
-    uploadTokens(accessToken, designTokens);
+  const upload = async (
+    accessToken: string,
+    designTokens: FileData<TokenBody>[],
+  ) => {
+    const url = await uploadTokens(accessToken, designTokens);
     setIsUploading(false);
-    navigate("/complete");
+    navigate(`/complete?url=${url}`);
   };
 
   const requestDesignTokens = () => {
     setIsUploading(true);
-    parent.postMessage(
-      {
-        pluginMessage: {
-          type: "extractTokens",
-        },
-        pluginId: "*",
-      },
-      "*",
-    );
+    postMessageToPlugin<ActionTypeMap["extract-tokens"]>({
+      type: ACTION.EXTRACT_TOKEN,
+    });
   };
 
   return {

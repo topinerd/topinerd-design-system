@@ -3,11 +3,6 @@ export type TokenValue = {
   $value: VariableValue;
 };
 
-export type TokenFile = {
-  fileName: string;
-  body: TokenBody;
-};
-
 export type TokenBody = {
   [key: string]: TokenBody | TokenValue;
 };

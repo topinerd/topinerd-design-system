@@ -1,16 +1,30 @@
 import React from "react";
 import { createMemoryRouter, RouterProvider } from "react-router-dom";
 
-import Extract from "../pages/extract";
+import Home from "../pages/home";
 import Complete from "../pages/complete";
+import ExtractToken from "../pages/extract/token";
 
 const router = createMemoryRouter([
   {
     path: "/",
-    element: <Extract />,
+    element: <Home />,
   },
   {
-    path: "/complete",
+    path: "extract",
+    children: [
+      {
+        path: "token",
+        element: <ExtractToken />,
+      },
+      {
+        path: "icon",
+        element: <p>extract icon</p>,
+      },
+    ],
+  },
+  {
+    path: "complete",
     element: <Complete />,
   },
 ]);

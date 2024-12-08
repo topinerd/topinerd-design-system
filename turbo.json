@@ -9,15 +9,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
     },
-    "lint": {
-      "dependsOn": ["^lint"]
-    },
-    "format": {
-      "dependsOn": ["^format"]
-    },
-    "clean": {
-      "dependsOn": ["^clean"]
-    },
+    "test": {},
+    "lint": {},
+    "format": {},
+    "clean": {},
     "dev": {
       "cache": false,
       "persistent": true

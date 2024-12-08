@@ -1,11 +1,6 @@
-import type { AppMessage, ExtractTokenAction } from "../../types";
+import type { ActionType } from "../../shared/types/action";
+import type { Message } from "../../shared/types/plugin";
 
-function requestToPlugin<T>(pluginMessage: T) {
-  parent.postMessage({ pluginMessage }, "*");
-}
-
-export function requestExtractTokensToPlugin() {
-  requestToPlugin<AppMessage<ExtractTokenAction>>({
-    type: "extractTokens",
-  });
+export function postMessageToPlugin<T extends ActionType>(message: Message<T>) {
+  parent.postMessage({ pluginMessage: message, pluginId: "*" }, "*");
 }
