@@ -1,42 +1,17 @@
-export function isRGBA(value: unknown): value is RGBA {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    "r" in value &&
-    "g" in value &&
-    "b" in value &&
-    "a" in value &&
-    typeof (value as RGBA).r === "number" &&
-    typeof (value as RGBA).g === "number" &&
-    typeof (value as RGBA).b === "number" &&
-    typeof (value as RGBA).a === "number"
-  );
-}
-
+/**
+ * Checks if a value is a VariableAlias object.
+ * @param value - The value to check.
+ * @returns True if the value is a VariableAlias, false otherwise.
+ */
 export function isVariableAlias(value: unknown): value is VariableAlias {
-  return (
-    typeof value === "object" &&
-    value !== null &&
-    "type" in value &&
-    value.type === "VARIABLE_ALIAS" &&
-    "id" in value
-  );
-}
-
-export function rgbToHex({ r, g, b, a }: RGBA): string {
-  const toHex = (value: number) => {
-    const hex = Math.round(value * 255).toString(16);
-    return hex.length === 1 ? "0" + hex : hex;
-  };
-
-  const hex = [toHex(r), toHex(g), toHex(b)].join("");
-
-  if (a !== 1) {
-    const alpha = Math.round(a * 255)
-      .toString(16)
-      .padStart(2, "0");
-    return `#${hex}${alpha}`;
+  if (typeof value !== "object" || value === null) {
+    return false;
   }
 
-  return `#${hex}`;
+  const hasType =
+    "type" in value && (value as VariableAlias).type === "VARIABLE_ALIAS";
+  const hasId =
+    "id" in value && typeof (value as VariableAlias).id === "string";
+
+  return hasType && hasId;
 }

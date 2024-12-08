@@ -10,6 +10,8 @@
   },
   "scripts": {
     "prepare": "husky",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch",
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",

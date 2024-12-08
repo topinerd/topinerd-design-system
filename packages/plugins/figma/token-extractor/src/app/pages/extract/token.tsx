@@ -1,27 +1,35 @@
-import React, { useEffect, useState } from "react";
-import { Label } from "../components/label";
-import { Input } from "../components/input";
-import { Button } from "../components/button";
-import { UseUploadTokens } from "../hooks/use-upload-tokens";
+import React from "react";
+import { useEffect, useState } from "react";
 import { Loader2 } from "lucide-react";
-import type {
-  ExtractTokenAction,
-  ExtractTokenActionPayload,
-  PluginMessage,
-} from "../../types";
 
-const Extract: React.FC = () => {
-  const { isUplaoding, requestDesignTokens, upload } = UseUploadTokens();
+import { useUploadTokens } from "../../hooks/use-upload-tokens";
+import { Label } from "../../components/label";
+import { Input } from "../../components/input";
+import { Button } from "../../components/button";
+import { ACTION } from "../../../shared/constants";
+
+import type { FC } from "react";
+import type {
+  ActionPayloadMap,
+  ActionTypeMap,
+} from "../../../shared/types/action";
+import type { PluginMessage } from "../../../shared/types/plugin";
+
+const ExtractToken: FC = () => {
+  const { isUplaoding, requestDesignTokens, upload } = useUploadTokens();
   const [acessToken, setAcessToken] = useState("");
 
   useEffect(() => {
     window.onmessage = async (
       event: MessageEvent<
-        PluginMessage<ExtractTokenAction, ExtractTokenActionPayload>
+        PluginMessage<
+          ActionTypeMap["extract-tokens"],
+          ActionPayloadMap["extract-tokens"]
+        >
       >,
     ) => {
       const { type, payload } = event.data.pluginMessage;
-      if (type === "extractTokens" && payload) {
+      if (type === ACTION.EXTRACT_TOKEN && payload) {
         upload(acessToken, payload);
       }
     };
@@ -58,4 +66,4 @@ const Extract: React.FC = () => {
   );
 };
 
-export default Extract;
+export default ExtractToken;
