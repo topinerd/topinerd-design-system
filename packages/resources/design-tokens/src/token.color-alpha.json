@@ -3,31 +3,31 @@
     "white": {
       "5": {
         "$type": "COLOR",
-        "$value": "#0101010d"
+        "$value": "#ffffff0d"
       },
       "10": {
         "$type": "COLOR",
-        "$value": "#0101011a"
+        "$value": "#ffffff1a"
       },
       "20": {
         "$type": "COLOR",
-        "$value": "#01010133"
+        "$value": "#ffffff33"
       },
       "40": {
         "$type": "COLOR",
-        "$value": "#01010166"
+        "$value": "#ffffff66"
       },
       "60": {
         "$type": "COLOR",
-        "$value": "#01010199"
+        "$value": "#ffffff99"
       },
       "80": {
         "$type": "COLOR",
-        "$value": "#010101cc"
+        "$value": "#ffffffcc"
       },
       "white": {
         "$type": "COLOR",
-        "$value": "#010101"
+        "$value": "#ffffff"
       }
     },
     "black": {
