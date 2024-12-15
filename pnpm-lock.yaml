@@ -198,9 +198,7 @@ importers:
 
   configs/typescript-config: {}
 
-  packages/design-tokens: {}
-
-  packages/plugins/figma/token-extractor:
+  packages/plugins/figma/resource-extractor:
     dependencies:
       '@octokit/rest':
         specifier: ^21.0.1
@@ -332,6 +330,10 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.7.2
+
+  packages/resources/design-icons: {}
+
+  packages/resources/design-tokens: {}
 
   packages/ui/react:
     dependencies:

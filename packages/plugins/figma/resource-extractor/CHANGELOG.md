@@ -1,4 +1,4 @@
-# @topinerd-design-system/token-extractor
+# @topinerd-design-system/resource-extractor
 
 ## 0.0.2
 

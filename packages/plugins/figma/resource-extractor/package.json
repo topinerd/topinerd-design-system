@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "@topinerd-design-system/token-extractor",
+  "name": "@topinerd-design-system/resource-extractor",
   "version": "0.0.2",
   "type": "module",
   "scripts": {
