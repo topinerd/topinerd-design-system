@@ -4,6 +4,7 @@ import { createMemoryRouter, RouterProvider } from "react-router-dom";
 import Home from "../pages/home";
 import Complete from "../pages/complete";
 import ExtractToken from "../pages/extract/token";
+import ExtractIcon from "../pages/extract/icon";
 
 const router = createMemoryRouter([
   {
@@ -19,7 +20,7 @@ const router = createMemoryRouter([
       },
       {
         path: "icon",
-        element: <p>extract icon</p>,
+        element: <ExtractIcon />,
       },
     ],
   },

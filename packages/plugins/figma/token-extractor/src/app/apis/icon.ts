@@ -1,63 +1,62 @@
 import { Octokit } from "@octokit/rest";
 import {
-  getLatestCommitSha,
-  createNewBranch,
-  getBaseTreeSha,
-  createTree,
   createCommit,
-  updateBranch,
+  createNewBranch,
   createPullRequest,
+  createTree,
+  getBaseTreeSha,
+  getLatestCommitSha,
+  updateBranch,
 } from "./github";
-import { tokenConfig } from "../config";
+import { iconConfig } from "../config";
 
 import type { FileData } from "../../shared/types/data";
-import type { TokenBody } from "../../shared/types/token";
 
-export async function uploadTokens(
+export async function uploadIcons(
   accessToken: string,
-  designTokenFiles: FileData<TokenBody>[],
+  designIconFiles: FileData<string>[],
 ) {
   const octokit = new Octokit({ auth: accessToken });
 
   try {
-    const latestCommitSha = await getLatestCommitSha(octokit, tokenConfig);
+    const latestCommitSha = await getLatestCommitSha(octokit, iconConfig);
 
     const newBranch = await createNewBranch(
       octokit,
-      tokenConfig,
+      iconConfig,
       latestCommitSha,
     );
 
     const baseTreeSha = await getBaseTreeSha(
       octokit,
-      tokenConfig,
+      iconConfig,
       latestCommitSha,
     );
 
-    const files: FileData<string>[] = designTokenFiles.map(file => ({
+    const files: FileData<string>[] = designIconFiles.map(file => ({
       fileName: file.fileName,
-      body: JSON.stringify(file.body, null, 2),
+      body: file.body,
     }));
 
     const newTreeSha = await createTree(
       octokit,
-      tokenConfig,
+      iconConfig,
       baseTreeSha,
       files,
     );
 
     const newCommitSha = await createCommit(
       octokit,
-      tokenConfig,
+      iconConfig,
       newTreeSha,
       latestCommitSha,
     );
 
-    await updateBranch(octokit, tokenConfig, newBranch, newCommitSha);
+    await updateBranch(octokit, iconConfig, newBranch, newCommitSha);
 
     const pullRequestUrl = await createPullRequest(
       octokit,
-      tokenConfig,
+      iconConfig,
       newBranch,
     );
 
