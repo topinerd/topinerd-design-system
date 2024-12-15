@@ -6,13 +6,13 @@ import {
   transformSemanticToken,
 } from "./transformer";
 
-import COLOR_DARK from "../../../design-tokens/src/token.color-dark.json";
-import COLOR_LIGHT from "../../../design-tokens/src/token.color-light.json";
-import COLOR_ALPHA from "../../../design-tokens/src/token.color-alpha.json";
-import COLOR_SEMANTIC from "../../../design-tokens/src/token.color-semantic.json";
-import BREAKPOINTS from "../../../design-tokens/src/token.breakpoints.json";
-import RADIUS from "../../../design-tokens/src/token.radius.json";
-import SPACING from "../../../design-tokens/src/token.spacing.json";
+import COLOR_DARK from "../../../resources/design-tokens/src/token.color-dark.json";
+import COLOR_LIGHT from "../../../resources/design-tokens/src/token.color-light.json";
+import COLOR_ALPHA from "../../../resources/design-tokens/src/token.color-alpha.json";
+import COLOR_SEMANTIC from "../../../resources/design-tokens/src/token.color-semantic.json";
+import BREAKPOINTS from "../../../resources/design-tokens/src/token.breakpoints.json";
+import RADIUS from "../../../resources/design-tokens/src/token.radius.json";
+import SPACING from "../../../resources/design-tokens/src/token.spacing.json";
 
 const breakpoint = transformBasicToken(BREAKPOINTS);
 const radius = transformBasicToken(RADIUS);

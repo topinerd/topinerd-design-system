@@ -40,7 +40,7 @@ export const tokenConfig: Config = {
 export const iconConfig: Config = {
   owner: "topinerd",
   repo: "topinerd-design-system",
-  dir: "packages/resources/icons/src",
+  dir: "packages/resources/design-icons/src",
   baseBranch: "main",
   newBranch: "extract-icons",
   commitMsg: "Sync design icons with latest Figma updates",

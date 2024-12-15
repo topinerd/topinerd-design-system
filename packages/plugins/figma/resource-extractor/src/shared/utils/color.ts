@@ -11,7 +11,7 @@ export function isRGBA(value: unknown): value is RGBA {
   const { r, g, b, a } = value as Partial<RGBA>;
 
   const isChannelValid = (channel: unknown) =>
-    typeof channel === "number" && channel >= 0 && channel <= 255;
+    typeof channel === "number" && channel >= 0 && channel <= 1;
 
   const isAlphaValid = (alpha: unknown) =>
     typeof alpha === "number" && alpha >= 0 && alpha <= 1;
@@ -29,20 +29,26 @@ export function isRGBA(value: unknown): value is RGBA {
  * @param rgba - The RGBA object to convert.
  * @returns The HEX representation of the color.
  */
-export function rgbToHex({ r, g, b, a = 1 }: RGBA): string {
-  const toHex = (value: number) => {
-    const hex = Math.round(value).toString(16);
-    return hex.padStart(2, "0");
-  };
+export function rgbToHex(color: {
+  r: number;
+  g: number;
+  b: number;
+  a?: number;
+}): string {
+  // Convert r, g, b values from 0-1 range to 0-255
+  const to255 = (value: number) => Math.round(value * 255);
 
-  const hex = [toHex(r), toHex(g), toHex(b)].join("");
+  const r = to255(color.r).toString(16).padStart(2, "0");
+  const g = to255(color.g).toString(16).padStart(2, "0");
+  const b = to255(color.b).toString(16).padStart(2, "0");
 
-  if (a !== 1) {
-    const alpha = Math.round(a * 255)
+  let hex = `#${r}${g}${b}`;
+  if (color.a !== undefined && color.a < 1) {
+    const a = Math.round(color.a * 255)
       .toString(16)
       .padStart(2, "0");
-    return `#${hex}${alpha}`;
+    hex += a;
   }
 
-  return `#${hex}`;
+  return hex.toUpperCase();
 }
