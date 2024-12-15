@@ -1,0 +1,430 @@
+{
+  "color": {
+    "light": {
+      "gray": {
+        "10": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "green": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#000100"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "cyan": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "navy": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "red": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "purple": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#010001"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#010001"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "orange": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010100"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#010100"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "yellow": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#010100"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#010100"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#010100"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#010100"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "pink": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#010001"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#010001"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#010000"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      },
+      "blue": {
+        "50": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "100": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "200": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "300": {
+          "$type": "COLOR",
+          "$value": "#010101"
+        },
+        "400": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "500": {
+          "$type": "COLOR",
+          "$value": "#000101"
+        },
+        "600": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "700": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "800": {
+          "$type": "COLOR",
+          "$value": "#000001"
+        },
+        "900": {
+          "$type": "COLOR",
+          "$value": "#000000"
+        }
+      }
+    }
+  }
+}
