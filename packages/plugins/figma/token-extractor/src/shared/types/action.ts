@@ -12,10 +12,11 @@ export type ActionTypeMap = {
 };
 
 export type ExtractTokenActionPayload = FileData<TokenBody>[];
-export type ExtractIconActionPayload = object;
+export type ExtractIconActionPayload = FileData<string>[] | undefined;
 export type ActionPayload =
   | ExtractTokenActionPayload
   | ExtractIconActionPayload;
 export type ActionPayloadMap = {
   [ACTION.EXTRACT_TOKEN]: ExtractTokenActionPayload;
+  [ACTION.EXTRACT_ICON]: ExtractIconActionPayload;
 };

@@ -6,33 +6,6 @@ import type { FileData } from "../../shared/types/data";
 import type { TokenBody, TokenValue } from "../../shared/types/token";
 
 /**
- * Extracts tokens from Figma's local variable collections and converts them to a structured format.
- * @returns {Promise<FileData[]>} An array of token files with nested structures.
- */
-export async function extractTokens(): Promise<FileData<TokenBody>[]> {
-  const collections = await figma.variables.getLocalVariableCollectionsAsync();
-
-  // return await Promise.all(collections.map(generateFileData)).then(files =>
-  //   files.map(file => ({
-  //     ...file,
-  //     body: convertToNested(file.body),
-  //   })),
-  // );
-
-  const files: FileData<TokenBody>[] = [];
-
-  for (const collection of collections) {
-    files.push(await generateFileData(collection));
-  }
-
-  files.forEach(file => {
-    file.body = convertToNested(file.body);
-  });
-
-  return files;
-}
-
-/**
  * Generates token file data from a given VariableCollection.
  * @param collection - The VariableCollection containing modes, variable IDs, and metadata.
  * @returns A Promise resolving to a TokenFile object containing tokens structured by mode and variable.
@@ -122,4 +95,31 @@ async function createToken(
   }
 
   return null;
+}
+
+/**
+ * Extracts tokens from Figma's local variable collections and converts them to a structured format.
+ * @returns {Promise<FileData[]>} An array of token files with nested structures.
+ */
+export async function extractTokens(): Promise<FileData<TokenBody>[]> {
+  const collections = await figma.variables.getLocalVariableCollectionsAsync();
+
+  // return await Promise.all(collections.map(generateFileData)).then(files =>
+  //   files.map(file => ({
+  //     ...file,
+  //     body: convertToNested(file.body),
+  //   })),
+  // );
+
+  const files: FileData<TokenBody>[] = [];
+
+  for (const collection of collections) {
+    files.push(await generateFileData(collection));
+  }
+
+  files.forEach(file => {
+    file.body = convertToNested(file.body);
+  });
+
+  return files;
 }
