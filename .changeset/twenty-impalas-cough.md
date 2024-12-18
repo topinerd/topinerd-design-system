@@ -1,5 +1,5 @@
 ---
-"@topinerd-design-system/token-extractor": patch
+"@topinerd-design-system/resource-extractor": patch
 ---
 
 add icon extract feature
