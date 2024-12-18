@@ -74,7 +74,6 @@ async function createToken(
       return { $type: "STRING", $value: value };
     case "COLOR":
       if (isRGBA(value)) {
-        console.log(value);
         return { $type: "COLOR", $value: rgbToHex(value) };
       }
       break;

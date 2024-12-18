@@ -1,0 +1,51 @@
+{
+  "name": "@topinerd-design-system/react-icons",
+  "description": "A React-Icon Component library of the Topinerd design system",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "node": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "node ./script/transformer.js && pnpm format && tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --fix",
+    "format": "prettier . --write",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:"
+  },
+  "devDependencies": {
+    "@storybook/react": "^8.1.6",
+    "@svgr/core": "^8.1.0",
+    "@svgr/plugin-jsx": "^8.1.0",
+    "@svgr/plugin-prettier": "^8.1.0",
+    "@svgr/plugin-svgo": "^8.1.0",
+    "@topinerd-design-system/eslint-config": "workspace:*",
+    "@topinerd-design-system/prettier-config": "workspace:*",
+    "@topinerd-design-system/typescript-config": "workspace:*",
+    "@types/eslint": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "eslint": "catalog:",
+    "prettier": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
