@@ -1,5 +1,11 @@
 # @topinerd-design-system/resource-extractor
 
+## 0.0.3
+
+### Patch Changes
+
+- eb8a424: add icon extract feature
+
 ## 0.0.2
 
 ### Patch Changes
