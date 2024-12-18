@@ -1,6 +1,9 @@
 import { transform } from "@svgr/core";
 import { readdir, readFile, writeFile } from "node:fs/promises";
-import { resolve } from "path";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 function toPascalCase(str) {
   return str
@@ -10,11 +13,8 @@ function toPascalCase(str) {
     .replace(/-/g, "");
 }
 
-const iconDir = resolve(
-  import.meta.dirname,
-  "../../../resources/design-icons/src",
-);
-const outputDir = resolve(import.meta.dirname, "../src/components");
+const iconDir = resolve(__dirname, "../../../resources/design-icons/src");
+const outputDir = resolve(__dirname, "../src/components");
 const indexPath = resolve(outputDir, "../index.tsx");
 
 let importStatements = "";
