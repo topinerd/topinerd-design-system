@@ -85,7 +85,7 @@
     "hover": {
       "light": {
         "$type": "COLOR",
-        "$value": "#000100"
+        "$value": "#249A78"
       },
       "dark": {
         "$type": "COLOR",
@@ -199,6 +199,16 @@
         "$type": "COLOR",
         "$value": "{color.dark.gray.600}"
       }
+    },
+    "handle": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.300}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "#FFFFFF"
+      }
     }
   },
   "dimmed": {
@@ -222,6 +232,36 @@
       "dark": {
         "$type": "COLOR",
         "$value": "{color.dark.gray.100}"
+      }
+    },
+    "default": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.100}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "{color.dark.gray.100}"
+      }
+    },
+    "hover": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.gray.600}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "#FFFFFF"
+      }
+    },
+    "focus": {
+      "light": {
+        "$type": "COLOR",
+        "$value": "{color.light.green.400}"
+      },
+      "dark": {
+        "$type": "COLOR",
+        "$value": "#FFFFFF"
       }
     }
   },
