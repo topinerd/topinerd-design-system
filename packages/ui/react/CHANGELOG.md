@@ -1,5 +1,12 @@
 # @topinerd-design-system/react
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [9ed70ab]
+  - @topinerd-design-system/preset@0.0.5
+
 ## 0.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @topinerd-design-system/storybook
 
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [9ed70ab]
+  - @topinerd-design-system/preset@0.0.5
+  - @topinerd-design-system/react@0.0.4
+
 ## 0.0.3
 
 ### Patch Changes
