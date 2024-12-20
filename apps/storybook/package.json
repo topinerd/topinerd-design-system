@@ -2,7 +2,7 @@
   "private": true,
   "name": "@topinerd-design-system/storybook",
   "description": "A Storybook configuration for the @topinerd-design-system, designed to showcase and test UI components.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "scripts": {
     "build-storybook": "storybook build",

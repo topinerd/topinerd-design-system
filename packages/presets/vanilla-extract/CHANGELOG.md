@@ -1,5 +1,11 @@
 # @topinerd-design-system/preset
 
+## 0.0.5
+
+### Patch Changes
+
+- 9ed70ab: Synchronized with version 0.0.2 of the @topoinerd-design-system/design-icons package.
+
 ## 0.0.3
 
 ### Patch Changes
