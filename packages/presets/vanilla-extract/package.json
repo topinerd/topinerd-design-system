@@ -29,6 +29,7 @@
     "@vanilla-extract/esbuild-plugin": "^2.3.11",
     "@topinerd-design-system/eslint-config": "workspace:*",
     "@topinerd-design-system/typescript-config": "workspace:*",
+    "@topinerd-design-system/design-tokens": "workspace:*",
     "@types/eslint": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
