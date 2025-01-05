@@ -1,3 +1,5 @@
+import * as React from "react";
+
 import "@topinerd-design-system/preset/theme.css";
 import "@topinerd-design-system/react/style.css";
 
@@ -12,6 +14,17 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    Story => (
+      <div
+        style={{
+          fontFamily: "Pretendard",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 // export const decorators = [

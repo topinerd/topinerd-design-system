@@ -18,6 +18,8 @@
     "./style.css": "./dist/index.css"
   },
   "scripts": {
+    "test": "vitest --run",
+    "test:watch": "vitest --watch",
     "build": "tsup",
     "dev": "tsup --watch",
     "lint": "eslint . --fix",
@@ -26,13 +28,13 @@
   },
   "peerDependencies": {
     "@topinerd-design-system/preset": "workspace:*",
+    "@topinerd-design-system/react-icons": "workspace:*",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
+    "@hookform/resolvers": "^3.9.1",
     "@storybook/react": "^8.1.6",
-    "@vanilla-extract/css": "^1.15.2",
-    "@vanilla-extract/esbuild-plugin": "^2.3.11",
     "@topinerd-design-system/eslint-config": "workspace:*",
     "@topinerd-design-system/prettier-config": "workspace:*",
     "@topinerd-design-system/typescript-config": "workspace:*",
@@ -40,13 +42,24 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@vanilla-extract/css": "^1.15.2",
+    "@vanilla-extract/esbuild-plugin": "^2.3.11",
+    "@vanilla-extract/recipes": "^0.5.5",
     "eslint": "catalog:",
     "postcss": "catalog:",
     "prettier": "catalog:",
+    "react-hook-form": "^7.54.1",
     "tsup": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "catalog:",
+    "zod": "^3.24.1"
   },
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-scroll-area": "^1.2.2",
+    "@radix-ui/react-slot": "^1.1.0"
   }
 }
