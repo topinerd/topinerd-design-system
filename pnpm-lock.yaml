@@ -297,6 +297,9 @@ importers:
 
   packages/presets/vanilla-extract:
     devDependencies:
+      '@topinerd-design-system/design-tokens':
+        specifier: workspace:*
+        version: link:../../resources/design-tokens
       '@topinerd-design-system/eslint-config':
         specifier: workspace:*
         version: link:../../../configs/eslint-config
@@ -444,6 +447,9 @@ importers:
       '@svgr/plugin-svgo':
         specifier: ^8.1.0
         version: 8.1.0(@svgr/core@8.1.0(typescript@5.7.2))(typescript@5.7.2)
+      '@topinerd-design-system/design-icons':
+        specifier: workspace:*
+        version: link:../../resources/design-icons
       '@topinerd-design-system/eslint-config':
         specifier: workspace:*
         version: link:../../../configs/eslint-config
