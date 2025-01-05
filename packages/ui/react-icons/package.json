@@ -25,7 +25,8 @@
   },
   "peerDependencies": {
     "react": "catalog:",
-    "react-dom": "catalog:"
+    "react-dom": "catalog:",
+    "@topinerd-design-system/design-icons": "workspace:*"
   },
   "devDependencies": {
     "@storybook/react": "^8.1.6",
@@ -36,7 +37,6 @@
     "@topinerd-design-system/eslint-config": "workspace:*",
     "@topinerd-design-system/prettier-config": "workspace:*",
     "@topinerd-design-system/typescript-config": "workspace:*",
-    "@topinerd-design-system/design-icons": "workspace:*",
     "@types/eslint": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",

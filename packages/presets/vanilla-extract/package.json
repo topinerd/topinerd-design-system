@@ -24,12 +24,14 @@
     "format": "prettier . --write",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
+  "peerDependencies": {
+    "@topinerd-design-system/design-tokens": "workspace:*"
+  },
   "devDependencies": {
     "@vanilla-extract/css": "^1.15.2",
     "@vanilla-extract/esbuild-plugin": "^2.3.11",
     "@topinerd-design-system/eslint-config": "workspace:*",
     "@topinerd-design-system/typescript-config": "workspace:*",
-    "@topinerd-design-system/design-tokens": "workspace:*",
     "@types/eslint": "catalog:",
     "@types/node": "catalog:",
     "eslint": "catalog:",
