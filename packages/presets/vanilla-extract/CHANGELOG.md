@@ -1,5 +1,12 @@
 # @topinerd-design-system/preset
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [357d337]
+  - @topinerd-design-system/design-tokens@0.0.3
+
 ## 0.0.5
 
 ### Patch Changes
