@@ -1,5 +1,11 @@
 # @topinerd-design-system/design-tokens
 
+## 0.0.3
+
+### Patch Changes
+
+- a7888f7: update latest figma changes
+
 ## 0.0.2
 
 ### Patch Changes

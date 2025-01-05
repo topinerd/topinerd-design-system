@@ -1,5 +1,13 @@
 # @topinerd-design-system/react
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [a7888f7]
+  - @topinerd-design-system/react-icons@0.0.3
+  - @topinerd-design-system/preset@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes
