@@ -287,6 +287,26 @@
           "$value": "{color.dark.gray.100}"
         }
       },
+      "default": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{alpha.white.white}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "{color.dark.gray.50}"
+        }
+      },
+      "hover": {
+        "light": {
+          "$type": "COLOR",
+          "$value": "{color.light.gray.10}"
+        },
+        "dark": {
+          "$type": "COLOR",
+          "$value": "{color.dark.gray.100}"
+        }
+      },
       "pressed": {
         "light": {
           "$type": "COLOR",
