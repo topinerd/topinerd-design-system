@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const iconNames = Object.keys(Icons);
 
 const meta = {
-  title: "Example/Icons",
+  title: "Primitive/Icons",
   parameters: {
     layout: "padded",
   },
