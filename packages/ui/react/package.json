@@ -1,7 +1,7 @@
 {
   "name": "@topinerd-design-system/react",
   "description": "A React implementation of the Topinerd design system",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
