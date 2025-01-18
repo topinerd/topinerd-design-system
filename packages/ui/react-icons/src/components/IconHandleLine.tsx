@@ -1,6 +1,10 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const IconHandleLine = (props: SVGProps<SVGSVGElement>) => (
+const IconHandleLine = ({
+  fill = "currentColor",
+  stroke = "currentColor",
+  ...props
+}: SVGProps<SVGSVGElement>) => (
   <svg
     width={25}
     height={24}
@@ -12,19 +16,19 @@ const IconHandleLine = (props: SVGProps<SVGSVGElement>) => (
     <g clipPath="url(#clip0_1484_822)">
       <path
         d="M4.5 8H20.5"
-        stroke="#BBBCBE"
+        stroke={stroke}
         strokeWidth={1.4}
         strokeLinecap="round"
       />
       <path
         d="M4.5 12H20.5"
-        stroke="#BBBCBE"
+        stroke={stroke}
         strokeWidth={1.4}
         strokeLinecap="round"
       />
       <path
         d="M4.5 16H20.5"
-        stroke="#BBBCBE"
+        stroke={stroke}
         strokeWidth={1.4}
         strokeLinecap="round"
       />

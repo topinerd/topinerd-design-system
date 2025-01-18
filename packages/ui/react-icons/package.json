@@ -17,7 +17,7 @@
     }
   },
   "scripts": {
-    "build": "node ./script/transformer.js && pnpm format && tsup",
+    "build": "node ./script/transform.js && pnpm format && tsup",
     "dev": "tsup --watch",
     "lint": "eslint . --fix",
     "format": "prettier . --write",

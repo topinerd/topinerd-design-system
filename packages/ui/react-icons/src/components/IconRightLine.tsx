@@ -1,6 +1,10 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const IconRightLine = (props: SVGProps<SVGSVGElement>) => (
+const IconRightLine = ({
+  fill = "currentColor",
+  stroke = "currentColor",
+  ...props
+}: SVGProps<SVGSVGElement>) => (
   <svg
     width={25}
     height={24}
@@ -11,7 +15,7 @@ const IconRightLine = (props: SVGProps<SVGSVGElement>) => (
   >
     <path
       d="M10.5 7L15.5 12L10.5 17"
-      stroke="black"
+      stroke={stroke}
       strokeWidth={1.5}
       strokeLinecap="round"
       strokeLinejoin="round"

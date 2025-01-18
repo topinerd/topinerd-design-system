@@ -1,6 +1,10 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const IconCloseButtonFill = (props: SVGProps<SVGSVGElement>) => (
+const IconCloseButtonFill = ({
+  fill = "currentColor",
+  stroke = "currentColor",
+  ...props
+}: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
     height={24}
@@ -11,7 +15,7 @@ const IconCloseButtonFill = (props: SVGProps<SVGSVGElement>) => (
   >
     <path
       d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
-      fill="black"
+      fill={fill}
       fillOpacity={0.6}
     />
     <path
