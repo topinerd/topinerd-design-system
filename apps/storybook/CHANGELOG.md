@@ -1,5 +1,11 @@
 # @topinerd-design-system/storybook
 
+## 0.0.6
+
+### Patch Changes
+
+- @topinerd-design-system/react@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes

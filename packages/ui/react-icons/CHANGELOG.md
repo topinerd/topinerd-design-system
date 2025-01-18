@@ -1,5 +1,11 @@
 # @topinerd-design-system/react-icons
 
+## 0.0.4
+
+### Patch Changes
+
+- 7efabf7: Make icon colors customizable.
+
 ## 0.0.3
 
 ### Patch Changes
