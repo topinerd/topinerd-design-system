@@ -1,6 +1,10 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const IconFilterFill = (props: SVGProps<SVGSVGElement>) => (
+const IconFilterFill = ({
+  fill = "currentColor",
+  stroke = "currentColor",
+  ...props
+}: SVGProps<SVGSVGElement>) => (
   <svg
     width={24}
     height={24}
@@ -11,33 +15,33 @@ const IconFilterFill = (props: SVGProps<SVGSVGElement>) => (
   >
     <path
       d="M14.2192 12C14.2192 10.7574 15.2266 9.75 16.4692 9.75C17.7119 9.75 18.7192 10.7574 18.7192 12C18.7192 13.2426 17.7119 14.25 16.4692 14.25C15.2266 14.25 14.2192 13.2426 14.2192 12Z"
-      fill="black"
+      fill={fill}
     />
     <path
       d="M13.5068 17.5C13.5068 18.7426 12.4995 19.75 11.2568 19.75C10.0142 19.75 9.00684 18.7426 9.00684 17.5C9.00684 16.2574 10.0142 15.25 11.2568 15.25C12.4995 15.25 13.5068 16.2574 13.5068 17.5Z"
-      fill="black"
+      fill={fill}
     />
     <path
       d="M9.78125 6.5C9.78125 7.74264 8.77389 8.75 7.53125 8.75C6.28861 8.75 5.28125 7.74264 5.28125 6.5C5.28125 5.25736 6.28861 4.25 7.53125 4.25C8.77389 4.25 9.78125 5.25736 9.78125 6.5Z"
-      fill="black"
+      fill={fill}
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M21.0005 12C21.0005 12.4142 20.6647 12.75 20.2505 12.75H3.75C3.33579 12.75 3 12.4142 3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.2505C20.6647 11.25 21.0005 11.5858 21.0005 12Z"
-      fill="black"
+      fill={fill}
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M3.75 18.25C3.33579 18.25 3 17.9142 3 17.5C3 17.0858 3.33579 16.75 3.75 16.75L20.2505 16.75C20.6647 16.75 21.0005 17.0858 21.0005 17.5C21.0005 17.9142 20.6647 18.25 20.2505 18.25L3.75 18.25Z"
-      fill="black"
+      fill={fill}
     />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M3.00003 6.5C3.00003 6.08578 3.33581 5.75 3.75003 5.75L20.2505 5.75C20.6647 5.75 21.0005 6.08579 21.0005 6.5C21.0005 6.91421 20.6647 7.25 20.2505 7.25L3.75003 7.25C3.33581 7.25 3.00003 6.91421 3.00003 6.5Z"
-      fill="black"
+      fill={fill}
     />
   </svg>
 );

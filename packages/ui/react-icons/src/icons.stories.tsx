@@ -30,7 +30,12 @@ export const AllIcons: Story = {
                 width: "120px",
               }}
             >
-              <IconComponent width={24} height={24} />
+              <IconComponent
+                width={24}
+                height={24}
+                fill="black"
+                stroke="black"
+              />
               <span
                 style={{
                   fontSize: "12px",
