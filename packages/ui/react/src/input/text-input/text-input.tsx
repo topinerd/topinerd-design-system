@@ -1,5 +1,6 @@
 import React from "react";
-import { textInputBase, textInputContainer } from "./text-input.css";
+import { BaseInput } from "../base-input";
+import { InputContainer } from "../input-container";
 
 type TextInputElement = React.ElementRef<"input">;
 
@@ -18,16 +19,11 @@ interface TextInputProps extends React.ComponentPropsWithoutRef<"input"> {
 const TextInput = React.forwardRef<TextInputElement, TextInputProps>(
   ({ leftIcon, rightIcon, ...props }, ref) => {
     return (
-      <div className={textInputContainer}>
+      <InputContainer>
         {leftIcon && leftIcon}
-        <input
-          {...props}
-          ref={ref}
-          spellCheck={false}
-          className={textInputBase}
-        />
+        <BaseInput {...props} ref={ref} />
         {rightIcon && rightIcon}
-      </div>
+      </InputContainer>
     );
   },
 );
