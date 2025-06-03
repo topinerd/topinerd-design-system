@@ -1,3 +1,3 @@
 # `@topinerd-design-system/preset`
 
-A collection of design tokens extracted from Figma, ready to integrate into your design system.
+Provides design tokens and base styles preset for the Topinerd Design System, optimized for vanilla-extract.
