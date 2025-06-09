@@ -35,14 +35,14 @@ const useImageUploader = (props: UseImageUploaderProps): RenderProps => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const selectedFiles = e.target.files;
-    if (selectedFiles !== undefined) return;
+    if (!selectedFiles) return;
 
     if (mode === "single") {
-      setFiles(selectedFiles[0]);
+      setFiles(selectedFiles.length ? [selectedFiles[0]] : []);
     }
 
     if (mode === "multiple") {
-      setFiles(prev => [...prev, ...selectedFiles]);
+      setFiles(prev => [...prev, ...Array.from(selectedFiles)]);
     }
   };
 
