@@ -1,0 +1,304 @@
+{
+  "Color Palette": {
+    "Brand": {
+      "Primary": {
+        "$type": "COLOR",
+        "$value": "#FFCB02"
+      }
+    },
+    "Blue Scale": {
+      "Blue_1": {
+        "$type": "COLOR",
+        "$value": "#FFFFFF"
+      },
+      "Blue_2": {
+        "$type": "COLOR",
+        "$value": "#D5D8F0"
+      },
+      "Blue_3": {
+        "$type": "COLOR",
+        "$value": "#9094BD"
+      },
+      "Blue_4": {
+        "$type": "COLOR",
+        "$value": "#676B93"
+      },
+      "Blue_5": {
+        "$type": "COLOR",
+        "$value": "#44486A"
+      },
+      "Blue_6": {
+        "$type": "COLOR",
+        "$value": "#33354F"
+      },
+      "Blue_7": {
+        "$type": "COLOR",
+        "$value": "#292B3E"
+      },
+      "Blue_8": {
+        "$type": "COLOR",
+        "$value": "#1F2031"
+      },
+      "Blue_9": {
+        "$type": "COLOR",
+        "$value": "#0F101C"
+      },
+      "Blue_A1": {
+        "$type": "COLOR",
+        "$value": "#D5D8F073"
+      },
+      "Blue_A2": {
+        "$type": "COLOR",
+        "$value": "#D5D8F040"
+      },
+      "Blue_A3": {
+        "$type": "COLOR",
+        "$value": "#D5D8F026"
+      },
+      "Blue_A80": {
+        "$type": "COLOR",
+        "$value": "#0F101CCC"
+      }
+    },
+    "State Color": {
+      "Blue": {
+        "$type": "COLOR",
+        "$value": "#1E82F0"
+      },
+      "Green": {
+        "$type": "COLOR",
+        "$value": "#00AA5F"
+      },
+      "Red": {
+        "$type": "COLOR",
+        "$value": "#F55A32"
+      },
+      "Orange": {
+        "$type": "COLOR",
+        "$value": "#CD7300"
+      },
+      "Blue_Dark": {
+        "$type": "COLOR",
+        "$value": "#003264"
+      },
+      "Green_Dark": {
+        "$type": "COLOR",
+        "$value": "#00321E"
+      },
+      "Red_Dark": {
+        "$type": "COLOR",
+        "$value": "#50190A"
+      },
+      "Orange_Dark": {
+        "$type": "COLOR",
+        "$value": "#412800"
+      },
+      "Blue_Trans": {
+        "$type": "COLOR",
+        "$value": "#003264BF"
+      },
+      "Green_Trans": {
+        "$type": "COLOR",
+        "$value": "#00321EBF"
+      },
+      "Red_Trans": {
+        "$type": "COLOR",
+        "$value": "#50190ABF"
+      },
+      "Orange_Trans": {
+        "$type": "COLOR",
+        "$value": "#412800BF"
+      }
+    }
+  },
+  "Semantic Color": {
+    "Text": {
+      "(B1)_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_1}"
+      },
+      "(B2)_Secondary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_2}"
+      },
+      "(B3)_Tertiary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_3}"
+      },
+      "(BA1)_Guide": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A1}"
+      },
+      "(BA2)_Disabled": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A2}"
+      },
+      "(B9)_Contrast": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_9}"
+      }
+    },
+    "Icon": {
+      "(B1)_Accent": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_1}"
+      },
+      "(B1)_Primary_Hover": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_1}"
+      },
+      "(B2)_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_2}"
+      },
+      "(B2)_Secondary_Hover": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_2}"
+      },
+      "(B3)_Secondary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_3}"
+      },
+      "(BA1)_Guide": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A1}"
+      },
+      "(BA2)_Disabled": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A2}"
+      },
+      "(B9)_Contrast": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_9}"
+      }
+    },
+    "Line": {
+      "(B1)_Border_Accent": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_1}"
+      },
+      "(BA2)_Border_Default": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A2}"
+      },
+      "(BA3)_Border_Disabled": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A3}"
+      },
+      "(BA2)_Divider_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A2}"
+      },
+      "(B6)_Divider_Secondary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_6}"
+      }
+    },
+    "Button": {
+      "(Brand_Primary)_Fill_Accent": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Brand.Primary}"
+      },
+      "(B1)_Fill_Primary_Hover": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_1}"
+      },
+      "(B1)_Fill_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_2}"
+      },
+      "(B5)_Fill_Secondary_Hover": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_4}"
+      },
+      "(B5)_Fill_Secondary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_5}"
+      },
+      "(B6)_Fill_Tertiary_Hover": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_5}"
+      },
+      "(B6)_Fill_Tertiary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_6}"
+      }
+    },
+    "Background": {
+      "(B4)_Elevated4": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_4}"
+      },
+      "(B5)_Elevated3": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_5}"
+      },
+      "(B6)_Elevated2": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_6}"
+      },
+      "(B8)_Elevated1": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_8}"
+      },
+      "(B9)_Default": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_9}"
+      },
+      "(A80)_Dimmed": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.Blue Scale.Blue_A80}"
+      }
+    },
+    "State": {
+      "(Blue)_Info_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Blue}"
+      },
+      "(Green)_Success_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Green}"
+      },
+      "(Red)_Error_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Red}"
+      },
+      "(Orange)_Warning_Primary": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Orange}"
+      },
+      "(Blue)_Info_Dark": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Blue_Dark}"
+      },
+      "(Green)_Success_Dark": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Green_Dark}"
+      },
+      "(Red)_Error_Dark": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Red_Dark}"
+      },
+      "(Orange)_Warning_Dark": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Orange_Dark}"
+      },
+      "(Blue)_Info_Trans": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Blue_Trans}"
+      },
+      "(Green)_Success_Trans": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Green_Trans}"
+      },
+      "(Red)_Error_Trans": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Red_Trans}"
+      },
+      "(Orange)_Warning_Trans": {
+        "$type": "COLOR",
+        "$value": "{Color Palette.State Color.Orange_Trans}"
+      }
+    }
+  }
+}
