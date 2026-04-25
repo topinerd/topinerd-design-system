@@ -9,16 +9,21 @@ import type { TokenBody } from "../../shared/types/token";
 import type { ActionTypeMap } from "../../shared/types/action";
 
 export function useUploadTokens() {
-  const [isUplaoding, setIsUploading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
   const navigate = useNavigate();
 
   const upload = async (
     accessToken: string,
     designTokens: FileData<TokenBody>[],
   ) => {
-    const url = await uploadTokens(accessToken, designTokens);
-    setIsUploading(false);
-    navigate(`/complete?url=${url}`);
+    setIsUploading(true);
+
+    try {
+      const url = await uploadTokens(accessToken, designTokens);
+      navigate(`/complete?url=${url}`);
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   const requestDesignTokens = () => {
@@ -29,7 +34,7 @@ export function useUploadTokens() {
   };
 
   return {
-    isUplaoding,
+    isUploading,
     requestDesignTokens,
     upload,
   };

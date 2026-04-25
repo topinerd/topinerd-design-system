@@ -13,9 +13,13 @@ export function useUploadIcons() {
     designIcons: FileData<string>[],
   ) => {
     setIsUploading(true);
-    const url = await uploadIcons(accessToken, designIcons);
-    setIsUploading(false);
-    navigate(`/complete?url=${url}`);
+
+    try {
+      const url = await uploadIcons(accessToken, designIcons);
+      navigate(`/complete?url=${url}`);
+    } finally {
+      setIsUploading(false);
+    }
   };
 
   return {
