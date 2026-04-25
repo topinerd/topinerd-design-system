@@ -11,7 +11,7 @@ export default defineConfig({
   /**
    * entrypoint, outpout directory
    */
-  entry: ["src/index.tsx"],
+  entry: ["src/index.ts"],
   outDir: "dist",
 
   /**
